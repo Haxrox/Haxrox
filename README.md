@@ -1,4 +1,8 @@
-### Hi there 👋
+### Hi there! 👋
+
+I'm Haxrox (online alias), and I'm currently a second year Computer Engineering student at The University of British Columbia. 
+
+Check out some of my projects below!
 
 <!--
 **Haxrox/Haxrox** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
