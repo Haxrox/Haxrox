@@ -18,3 +18,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_HAXROX_DF439 }}'
           channelId: live
           projectId: haxrox-df439
+          target: haxtech
