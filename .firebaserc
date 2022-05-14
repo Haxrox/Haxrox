@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "haxtech"
+  },
+  "targets": {
+    "haxrox-df439": {
+      "hosting": {
+        "haxtech": [
+          "haxtech"
+        ]
+      }
+    }
+  }
+}
