@@ -1,6 +1,6 @@
 ### Hi there! 👋
 
-I'm Haxrox (online alias), and I'm currently a second year Computer Engineering student at The University of British Columbia. 
+I'm currently a second year Computer Engineering student at The University of British Columbia. 
 
 Check out some of my projects below!
 
