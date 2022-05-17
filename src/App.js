@@ -1,48 +1,49 @@
 import './App.css';
-import MaterialButton from './MaterialButton.js';
+import { useNavigate } from "react-router-dom";
+import {SocialButtons} from './components/SocialButton.js';
 import { Avatar, Button, IconButton, Grid, ButtonGroup } from '@mui/material';
-import { Delete } from '@mui/icons-material';
 
 function App() {
+  const navigate = useNavigate();
+
+  const navigatePage = (e) => {
+    navigate(e.target.id);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <Grid container spacing = {4} direction="column" alignItems="center" justifyContent="center">
+        <Grid container spacing={4} direction="column" alignItems="center" justifyContent="center">
           <Grid item>
-           <Avatar alt="Avatar" src="/images/avatar.jpg" sx={{ width: 128, height: 128 }}/>
+            <Avatar alt="Avatar" src="/images/avatar.jpg" sx={{ width: 128, height: 128 }} />
           </Grid>
 
           <Grid item>
             <p>Bell Chen</p>
           </Grid>
-          
+
           <Grid item alignItems="center" justifyContent="center">
             <ButtonGroup variant="contained" aria-label="outlined button group">
-              <Button>About</Button>
-              <Button>Projects</Button>
-              <Button>Contact</Button>
+              <Button id="about" onClick={navigatePage}>About</Button>
+              <Button id="projects" onClick={navigatePage}>Projects</Button>
+              <Button id="contact" onClick={navigatePage}>Contact</Button>
             </ButtonGroup>
           </Grid>
-         
+
           <Grid item alignItems="center" justifyContent="center">
-            <Grid container spacing = {4} direction="row" alignItems="center" justifyContent="center">
+            <Grid container spacing={4} direction="row" alignItems="center" justifyContent="center">
               <Grid item>
-                <IconButton aria-label="linkedin" className="socials">
-                <a href="https://www.linkedin.com/in/bell-chen/" target="_blank" rel="noopener noreferrer">
-                  <img src="/icons/linkedin.svg" className="Socials-icon" alt="linkedin"/>
-                </a>
-                </IconButton>
+                <SocialButtons/>
+              </Grid>
+              {/* <Grid item>
+                <SocialButton label="LinkedIn" url="https://www.linkedin.com/in/bell-chen/" icon = "/icons/linkedin.svg"/>
               </Grid>
 
               <Grid item>
-                <IconButton aria-label="linkedin" className="socials">
-                  <a href="https://github.com/Haxrox" target="_blank" rel="noopener noreferrer">
-                    <img src="/icons/GitHub-Mark-120px-plus.png" className="Socials-icon" alt="github"/>
-                  </a>
-                </IconButton>
-              </Grid>
+                <SocialButton label="GitHub" url="https://github.com/Haxrox" icon = "/icons/GitHub-Mark-120px-plus.png"/>
+              </Grid> */}
             </Grid>
-          </Grid>  
+          </Grid>
         </Grid>
       </header>
     </div>
