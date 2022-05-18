@@ -6,27 +6,27 @@ import { SocialButtons } from '../components/SocialButton.js';
 
 function Contact() {
     const navigate = useNavigate();
-    
+
     return (
         <Box className="Contact">
-           <Header></Header>
-            <Box sx = {{m: 2}}>
+            <Header></Header>
+            <Box sx={{ m: 2 }}>
                 <Card variant="outlined" sx={{ minWidth: 275, minHeight: 1000 }}>
                     <CardContent>
                         <Typography variant="h5" component="div">
-                        Contact
+                            Contact
                         </Typography>
                         <Typography variant="body2">
                             Hello World!
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <SocialButtons height="24px" width="24px"/>
+                        <SocialButtons height="24px" width="24px" />
                     </CardActions>
                 </Card>
             </Box>
-            <Fab variant="extended" onClick={() => {navigate('/projects')}} sx={{position: 'fixed', bottom: 16, left: 16}} aria-label="Fab" color='primary' >
-                <NavigateBefore/>
+            <Fab variant="extended" onClick={() => { navigate('/projects') }} sx={{ position: 'fixed', bottom: 16, left: 16 }} aria-label="Fab" color='primary' >
+                <NavigateBefore />
                 Projects
             </Fab>
         </Box>

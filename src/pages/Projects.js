@@ -7,8 +7,8 @@ import { SocialButtons } from '../components/SocialButton.js';
 function Projects() {
     return (
         <Box className="Projects">
-           <Header></Header>
-            <Box sx = {{m: 2}}>
+            <Header></Header>
+            <Box sx={{ m: 2 }}>
                 <Card variant="outlined" sx={{ minWidth: 275, minHeight: 1000 }}>
                     <CardContent>
                         <Typography variant="h5" component="div">
@@ -19,17 +19,17 @@ function Projects() {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <SocialButtons height="24px" width="24px"/>
+                        <SocialButtons height="24px" width="24px" />
                     </CardActions>
                 </Card>
             </Box>
             <NavigateButton href='/about' left='16px'>
-                <NavigateBefore/>
+                <NavigateBefore />
                 About
             </NavigateButton>
             <NavigateButton href='/contact' right='16px'>
                 Contact
-                <NavigateNext/>
+                <NavigateNext />
             </NavigateButton>
         </Box>
     );

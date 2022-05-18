@@ -6,10 +6,10 @@ class MaterialButton extends React.Component {
         super(props);
         this.clicked.bind(this);
     }
-    
+
     componentDidMount() {
         const button = document.querySelector('.mdc-button');
-        const ripple = new mdc.ripple.MDCRipple(button);
+        new mdc.ripple.MDCRipple(button);
     }
 
     clicked(e) {

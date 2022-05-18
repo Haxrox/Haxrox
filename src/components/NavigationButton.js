@@ -11,7 +11,7 @@ function NavigateButton(props) {
             onClick={
                 () => { navigate(props.href) }
             }
-            sx = {{position: props.position || 'fixed', bottom: props.bottom || '16px', left: props.left, right: props.right }}
+            sx={{ position: props.position || 'fixed', bottom: props.bottom || '16px', left: props.left, right: props.right }}
             aria-label="Fab"
             color='secondary'
         >
