@@ -1,11 +1,10 @@
 import { NavigateNext } from '@mui/icons-material';
-import { Box, Card, CardActions, CardContent, Fab, Typography } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { Box, Card, CardActions, CardContent, Typography } from '@mui/material';
 import Header from '../components/Header.js';
+import NavigateButton from '../components/NavigationButton.js';
 import { SocialButtons } from '../components/SocialButton.js';
 
 function About() {
-    const navigate = useNavigate();
     return (
         <Box className="About">
             <Header></Header>
