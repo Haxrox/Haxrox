@@ -7,8 +7,9 @@ import {
 } from "react-router-dom";
 import './index.css';
 import App from './App';
-import About from './pages/About';
-import Contact from './pages/Contact';
+import About from './pages/About.js';
+import Contact from './pages/Contact.js';
+import Projects from './pages/Projects.js';
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
@@ -16,16 +17,16 @@ const theme = createTheme({
   palette: {
     // mode: 'dark',
     primary: {
-      light: '#757ce8',
-      main: '#3f50b5',
-      dark: '#002884',
+      light: '#78d3ff',
+      main: '#31a2ff',
+      dark: '#0074cb',
       contrastText: '#fff',
     },
     secondary: {
-      light: '#ff7961',
-      main: '#f44336',
-      dark: '#ba000d',
-      contrastText: '#000',
+      light: '#6d86ff',
+      main: '#205AE8',
+      dark: '#0032b5',
+      contrastText: '#fff',
     },
   }
 });
@@ -38,6 +39,7 @@ root.render(
         <Routes>
           <Route path="/" element={<App />}></Route>
           <Route path="about" element={<About />}></Route>
+          <Route path="projects" element={<Projects />}></Route>
           <Route path="contact" element={<Contact />}></Route>
         </Routes>
       </BrowserRouter>

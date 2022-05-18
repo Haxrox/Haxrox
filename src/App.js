@@ -1,7 +1,7 @@
 import './App.css';
 import { useNavigate } from "react-router-dom";
 import {SocialButtons} from './components/SocialButton.js';
-import { Avatar, Button, IconButton, Grid, ButtonGroup } from '@mui/material';
+import { Container, Box, Typography, Avatar, Button, IconButton, Grid, ButtonGroup } from '@mui/material';
 
 function App() {
   const navigate = useNavigate();
@@ -12,21 +12,23 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <Box className="App-header" sx={{bgcolor: 'primary.main'}}>
         <Grid container spacing={4} direction="column" alignItems="center" justifyContent="center">
           <Grid item>
             <Avatar alt="Avatar" src="/images/avatar.jpg" sx={{ width: 128, height: 128 }} />
           </Grid>
 
-          <Grid item>
-            <p>Bell Chen</p>
+          <Grid item> 
+            <Typography variant="h2" fontWeight="bold" textTransform='uppercase' color='primary.contrastText'>
+                Bell Chen
+            </Typography>
           </Grid>
 
           <Grid item alignItems="center" justifyContent="center">
-            <ButtonGroup variant="contained" aria-label="outlined button group">
-              <Button id="about" onClick={navigatePage}>About</Button>
-              <Button id="projects" onClick={navigatePage}>Projects</Button>
-              <Button id="contact" onClick={navigatePage}>Contact</Button>
+            <ButtonGroup variant="contained" aria-label="outlined button group" color='secondary'>
+              <Button id="about" onClick={navigatePage} sx={{width: 128}}>About</Button>
+              <Button id="projects" onClick={navigatePage} sx={{width: 128}}>Projects</Button>
+              <Button id="contact" onClick={navigatePage} sx={{width: 128}}>Contact</Button>
             </ButtonGroup>
           </Grid>
 
@@ -45,7 +47,7 @@ function App() {
             </Grid>
           </Grid>
         </Grid>
-      </header>
+      </Box>
     </div>
   );
 }
