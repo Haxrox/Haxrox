@@ -2,10 +2,6 @@ import React from 'react';
 import { Box, IconButton } from '@mui/material';
 
 class SocialButton extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <IconButton aria-label={this.props.label} className="socials">
@@ -21,10 +17,6 @@ class SocialButton extends React.Component {
 }
 
 class SocialButtons extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <Box>
