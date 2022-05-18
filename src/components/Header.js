@@ -1,7 +1,7 @@
+import { AppBar, Avatar, Toolbar, Typography } from '@mui/material';
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 
-import {Avatar, Button, Typography, AppBar, Toolbar, Fab} from '@mui/material';
 
 function Header() {
     const navigate = useNavigate();

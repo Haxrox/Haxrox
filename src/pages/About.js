@@ -1,8 +1,8 @@
+import { NavigateNext } from '@mui/icons-material';
+import { Box, Card, CardActions, CardContent, Fab, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header.js';
-import {SocialButtons} from '../components/SocialButton.js';
-import { Fab, Avatar, Button, IconButton, Grid, ButtonGroup, AppBar, Toolbar, Container, Box, Card, CardContent, CardActions, Typography } from '@mui/material';
-import {NavigateNext} from '@mui/icons-material';
-import {useNavigate} from 'react-router-dom';
+import { SocialButtons } from '../components/SocialButton.js';
 
 function About() {
     const navigate = useNavigate();

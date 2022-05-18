@@ -1,12 +1,10 @@
+import { NavigateBefore, NavigateNext } from '@mui/icons-material';
+import { Box, Card, CardActions, CardContent, Typography } from '@mui/material';
 import Header from '../components/Header.js';
 import NavigateButton from '../components/NavigationButton.js';
-import {SocialButtons} from '../components/SocialButton.js';
-import { Fab, Avatar, Button, IconButton, Grid, ButtonGroup, AppBar, Toolbar, Container, Box, Card, CardContent, CardActions, Typography } from '@mui/material';
-import {NavigateNext, NavigateBefore} from '@mui/icons-material';
-import {useNavigate} from 'react-router-dom';
+import { SocialButtons } from '../components/SocialButton.js';
 
 function Projects() {
-    const navigate = useNavigate();
     return (
         <Box className="Projects">
            <Header></Header>

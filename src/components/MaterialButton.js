@@ -1,6 +1,5 @@
-import React from 'react';
-// import {MDCRipple} from '@material/ripple';
 import * as mdc from 'material-components-web';
+import React from 'react';
 
 class MaterialButton extends React.Component {
     constructor(props) {
