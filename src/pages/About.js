@@ -5,7 +5,6 @@ import Header from '../components/Header.js';
 import { SocialButtons } from '../components/SocialButton.js';
 
 function About() {
-    const navigate = useNavigate();
     return (
         <Box className="About">
             <Header></Header>
