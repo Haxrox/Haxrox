@@ -1,6 +1,7 @@
 import { NavigateNext } from '@mui/icons-material';
 import { Box, Card, CardActions, CardContent, Typography } from '@mui/material';
 import Header from '../components/Header.js';
+import NavigateButton from '../components/NavigationButton.js';
 import { SocialButtons } from '../components/SocialButton.js';
 
 function About() {
