@@ -1,16 +1,15 @@
-import React from 'react';
-// import {MDCRipple} from '@material/ripple';
 import * as mdc from 'material-components-web';
+import React from 'react';
 
 class MaterialButton extends React.Component {
     constructor(props) {
         super(props);
         this.clicked.bind(this);
     }
-    
+
     componentDidMount() {
         const button = document.querySelector('.mdc-button');
-        const ripple = new mdc.ripple.MDCRipple(button);
+        new mdc.ripple.MDCRipple(button);
     }
 
     clicked(e) {
