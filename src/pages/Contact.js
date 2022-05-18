@@ -25,10 +25,10 @@ function Contact() {
                     </CardActions>
                 </Card>
             </Box>
-            <Fab variant="extended" onClick={() => { navigate('/projects') }} sx={{ position: 'fixed', bottom: 16, left: 16 }} aria-label="Fab" color='primary' >
+            <NavigateButton href='/projects' left='16px'>
                 <NavigateBefore />
                 Projects
-            </Fab>
+            </NavigateButton>
         </Box>
     );
 }
