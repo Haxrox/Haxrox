@@ -1,22 +1,23 @@
 import Header from '../components/Header.js';
+import NavigateButton from '../components/NavigationButton.js';
 import {SocialButtons} from '../components/SocialButton.js';
 import { Fab, Avatar, Button, IconButton, Grid, ButtonGroup, AppBar, Toolbar, Container, Box, Card, CardContent, CardActions, Typography } from '@mui/material';
-import {NavigateNext} from '@mui/icons-material';
+import {NavigateNext, NavigateBefore} from '@mui/icons-material';
 import {useNavigate} from 'react-router-dom';
 
-function About() {
+function Projects() {
     const navigate = useNavigate();
     return (
-        <Box className="About">
-            <Header></Header>
+        <Box className="Projects">
+           <Header></Header>
             <Box sx = {{m: 2}}>
-                <Card variant="outlined" sx={{ maxWidth: 500 }}>
+                <Card variant="outlined" sx={{ minWidth: 275, minHeight: 1000 }}>
                     <CardContent>
                         <Typography variant="h5" component="div">
-                        About
+                            Projects
                         </Typography>
                         <Typography variant="body2">
-                        Hello World!
+                            Hello World!
                         </Typography>
                     </CardContent>
                     <CardActions>
@@ -24,13 +25,16 @@ function About() {
                     </CardActions>
                 </Card>
             </Box>
-            
-            <Fab variant="extended" onClick={() => {navigate('/projects')}} sx={{position: 'fixed', bottom: 16, right: 16}} aria-label="Fab" color='primary' >
-                PROJECTS
+            <NavigateButton href='/about' left='16px'>
+                <NavigateBefore/>
+                About
+            </NavigateButton>
+            <NavigateButton href='/contact' right='16px'>
+                Contact
                 <NavigateNext/>
-            </Fab>
+            </NavigateButton>
         </Box>
     );
 }
 
-export default About;
+export default Projects;
