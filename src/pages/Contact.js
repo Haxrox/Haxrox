@@ -1,6 +1,5 @@
 import { NavigateBefore } from '@mui/icons-material';
-import { Box, Card, CardActions, CardContent, Fab, Typography } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
+import { Box, Card, CardActions, CardContent, Typography } from '@mui/material';
 import Header from '../components/Header.js';
 import { SocialButtons } from '../components/SocialButton.js';
 
