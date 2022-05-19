@@ -1,4 +1,4 @@
-import { CircularProgress } from '@mui/material';
+import { Box, CircularProgress } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
@@ -31,21 +31,28 @@ const theme = createTheme({
       main: '#205AE8',
       dark: '#0032b5',
       contrastText: '#fff',
-    },
+    }
   }
 });
+
+const progress = (
+  <Box alignItems="center" justifyContent="center" sx={{ display: 'flex', height: "100vh" }}>
+    <CircularProgress />
+  </Box>
+)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
    <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Suspense fallback={<CircularProgress />}>
+        <Suspense fallback={progress}>
           <Routes>
             <Route path="/" element={<App />}></Route>
             <Route path="about" element={<About />}></Route>
             <Route path="projects" element={<Projects />}></Route>
             <Route path="contact" element={<Contact />}></Route>
+            <Route path="*" element={progress}></Route>
           </Routes>
         </Suspense>
       </BrowserRouter>

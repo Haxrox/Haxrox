@@ -7,7 +7,7 @@ import { ProjectCard } from '../components/Project.js';
 function Projects() {
     return (
         <Box className="Projects">
-            <Header></Header>
+            <Header tab="projects"></Header>
             <Box sx={{ m: 2 }}>
                 <ProjectCard />
             </Box>

@@ -7,7 +7,7 @@ import { SocialButtons } from '../components/SocialButton.js';
 function About() {
     return (
         <Box className="About">
-            <Header></Header>
+            <Header tab="about"></Header>
             <Box sx={{ m: 2 }}>
                 <Card variant="outlined" sx={{ maxWidth: 500 }}>
                     <CardContent>
