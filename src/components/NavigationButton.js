@@ -13,7 +13,7 @@ function NavigateButton(props) {
             }
             sx={{ position: props.position || 'fixed', bottom: props.bottom || '16px', left: props.left, right: props.right }}
             aria-label="Fab"
-            color='secondary'
+            color='primary'
         >
             {props.children}
         </Fab>
