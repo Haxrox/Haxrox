@@ -1,15 +1,21 @@
+import { CircularProgress } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   BrowserRouter, Route, Routes
 } from "react-router-dom";
 import App from './App';
 import './index.css';
-import About from './pages/About.js';
-import Contact from './pages/Contact.js';
-import Projects from './pages/Projects.js';
 import reportWebVitals from './reportWebVitals';
+
+// import About from './pages/About.js';
+// import Contact from './pages/Contact.js';
+// import Projects from './pages/Projects.js';
+
+const About = lazy(() => import('./pages/About.js'));
+const Contact = lazy(() => import('./pages/Contact.js'));
+const Projects = lazy(() => import('./pages/Projects.js'));
 
 const theme = createTheme({
   palette: {
@@ -34,12 +40,14 @@ root.render(
   <React.StrictMode>
    <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App />}></Route>
-          <Route path="about" element={<About />}></Route>
-          <Route path="projects" element={<Projects />}></Route>
-          <Route path="contact" element={<Contact />}></Route>
-        </Routes>
+        <Suspense fallback={<CircularProgress />}>
+          <Routes>
+            <Route path="/" element={<App />}></Route>
+            <Route path="about" element={<About />}></Route>
+            <Route path="projects" element={<Projects />}></Route>
+            <Route path="contact" element={<Contact />}></Route>
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>
