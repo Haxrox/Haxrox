@@ -1,6 +1,6 @@
 import { Avatar, Card, CardActionArea, CardActions, CardContent, Chip, Collapse, Divider, Typography, Grid } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Web, Javascript, GitHub, Android } from '@mui/icons-material';
+import { Web, Javascript, GitHub, Android, Api } from '@mui/icons-material';
 import React from 'react';
 import { SocialButton } from './SocialButton.js';
 
@@ -12,6 +12,10 @@ const ACTION_ICONS = {
     Web: {
         icon: Web,
         tooltip: "Website"
+    },
+    Backend: {
+        icon: Api,
+        tooltip: "Backend"
     }
 }
 
@@ -31,7 +35,7 @@ const CHIP_DATA = {
         icon: "icons/React.svg",
         color: "React"
     },
-    "Android": {
+    "Android Studio": {
         url: "https://developer.android.com/",
         icon: <Android color = "Android"/>,
         color: "Android"
@@ -41,10 +45,20 @@ const CHIP_DATA = {
         icon: "icons/Python.png",
         color: "Python"
     },
+    "CircuitPython": {
+        url: "https://circuitpython.org/",
+        icon: "https://cdn-shop.adafruit.com/categories/956/image.png",
+        color: "Python"
+    },
     "Raspberry Pi": {
         url: "https://www.raspberrypi.org/",
         icon: "icons/RPi-Logo-SCREEN.png",
         color: "RPi"
+    },
+    "BlueZ": {
+        url: "http://www.bluez.org/",
+        icon: "http://www.bluez.org/wp-content/themes/bluez/tuxicon.png",
+        color: null
     }
 }
 
@@ -118,46 +132,49 @@ function ProjectCard(props) {
                     <Typography variant="h5">
                         {props.details.title}
                     </Typography>
-                    <Typography sx={{ mb: 1 }} color="text.secondary">
+                    <Typography color="text.secondary">
+                        {props.details.type}
+                    </Typography>
+                    <Typography variant="subtitle" color="text.secondary" gutterBottom>
                         {props.details.date}
                     </Typography>
-                    <Typography variant="body2">
+                    <Typography variant="body2" sx={{ mt: 1 }} >
                         {props.details.shortDescription}
                     </Typography>
                 </CardContent>
-                <Collapse in={expanded} timeout="auto" unmountOnExit>
-                    <Divider variant="middle" />
-                    <CardContent sx={{ spacing: 2 }}>
-                        <Typography variant='body1' sx={{ mb: 1 }}>
-                            Tech Stack
-                        </Typography>
-                        <Grid container direction="row" spacing={1}>
-                            <ThemeProvider theme={CHIP_THEME}>
-                                {props.details.techStack.map((element, index) => {
-                                    const metadata = CHIP_DATA[element];
-                                    const avatar = metadata?.icon && <Avatar alt={element} src={typeof(metadata.icon) === "string" ? metadata.icon : ""} sx={{ bgcolor: "transparent"}}>{metadata.icon}</Avatar>
-                                    return <Grid item key={index}>
-                                        <Chip
-                                            key={index}
-                                            label={element}
-                                            avatar={avatar}
-                                            component={metadata && "a"}
-                                            href={metadata?.url}
-                                            clickable={metadata?.url !== undefined}
-                                            // color={metadata?.color}
-                                        />
-                                    </Grid>
-                                })}
-                            </ThemeProvider>
-                        </Grid>
-                        {/* <Chip label="Software" />
+            </CardActionArea>
+            <Collapse in={expanded} timeout="auto" unmountOnExit>
+                <Divider variant="middle" />
+                <CardContent sx={{ spacing: 2 }}>
+                    <Typography variant='body1' sx={{ mb: 1 }}>
+                        Technologies
+                    </Typography>
+                    <Grid container direction="row" spacing={1}>
+                        <ThemeProvider theme={CHIP_THEME}>
+                            {props.details.techStack.map((element, index) => {
+                                const metadata = CHIP_DATA[element];
+                                const avatar = metadata?.icon && <Avatar alt={element} src={typeof (metadata.icon) === "string" ? metadata.icon : ""} sx={{ bgcolor: "transparent" }}>{metadata.icon}</Avatar>
+                                return <Grid item key={index}>
+                                    <Chip
+                                        key={index}
+                                        label={element}
+                                        avatar={avatar}
+                                        component={metadata && "a"}
+                                        href={metadata?.url}
+                                        clickable={metadata?.url !== undefined}
+                                    // color={metadata?.color}
+                                    />
+                                </Grid>
+                            })}
+                        </ThemeProvider>
+                    </Grid>
+                    {/* <Chip label="Software" />
                         <Chip label="Hardware" />
                         <Chip label="School" /> */}
-                    </CardContent>
-                </Collapse>
-            </CardActionArea>
+                </CardContent>
+            </Collapse>
             <CardActions sx={{ position: 'absolute', bottom: 0 }}>
-                {props.details.url.map((url, index) =>
+                {props.details.url?.map((url, index) =>
                     <SocialButton key={index} label={url.type} icon={ACTION_ICONS[url.type]?.icon} url={url.href} height="24px" width="24px" color="primary" />
                 )}
                 {/* {props.details.url.map((url, index) =>

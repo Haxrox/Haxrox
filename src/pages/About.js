@@ -4,6 +4,7 @@ import Header from '../components/Header.js';
 import NavigateButton from '../components/NavigationButton.js';
 import { SocialButtons } from '../components/SocialButton.js';
 
+// TODO: include education + courses (?)
 function About() {
     return (
         <Box className="About">
