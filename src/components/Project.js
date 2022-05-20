@@ -109,6 +109,9 @@ function ProjectCard(props) {
     }
 
     return (
+        /** 
+         * Add filter tab here. Use grid layout (?)
+         */
         <Card raised={expanded} sx={{ position: 'relative', width: 350, minHeight: 500 }} onMouseEnter={handleExpand} onMouseLeave={handleContract}>
             <CardActionArea sx={{ minHeight: "100%" }}>
                 <CardContent>
@@ -141,7 +144,7 @@ function ProjectCard(props) {
                                             component={metadata && "a"}
                                             href={metadata?.url}
                                             clickable={metadata?.url !== undefined}
-                                        // color={metadata?.color}
+                                            // color={metadata?.color}
                                         />
                                     </Grid>
                                 })}
@@ -154,12 +157,9 @@ function ProjectCard(props) {
                 </Collapse>
             </CardActionArea>
             <CardActions sx={{ position: 'absolute', bottom: 0 }}>
-                <ThemeProvider theme={CHIP_THEME}>
-
                 {props.details.url.map((url, index) =>
                     <SocialButton key={index} label={url.type} icon={ACTION_ICONS[url.type]?.icon} url={url.href} height="24px" width="24px" color="primary" />
-                    )}
-                    </ThemeProvider>
+                )}
                 {/* {props.details.url.map((url, index) =>
                     <Tooltip key={index} title={ACTION_ICONS[url.type]?.tooltip}>
                         {React.forwardRef((props, ref) =>

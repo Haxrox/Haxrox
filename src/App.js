@@ -20,7 +20,7 @@ function App() {
 
           <Grid item>
             <Typography variant="h2" fontWeight="bold" textTransform='uppercase' color='primary.contrastText'>
-              Bell Chen
+              Bell Chen (WIP)
             </Typography>
           </Grid>
 

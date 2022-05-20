@@ -15,7 +15,7 @@ function About() {
                             About
                         </Typography>
                         <Typography variant="body2">
-                            Hello World!
+                            I am an undergraduate student at the University of British Columbia studying Computer Engineering. I am a committed worker with an eagerness to learn and grow through experience. I strive to further my knowledge in the tech industry and am always looking forward to learning something new.
                         </Typography>
                     </CardContent>
                     <CardActions>
