@@ -7,7 +7,7 @@ import { SocialButtons } from '../components/SocialButton.js';
 function About() {
     return (
         <Box className="About">
-            <Header></Header>
+            <Header tab="about"></Header>
             <Box sx={{ m: 2 }}>
                 <Card variant="outlined" sx={{ maxWidth: 500 }}>
                     <CardContent>
@@ -15,11 +15,11 @@ function About() {
                             About
                         </Typography>
                         <Typography variant="body2">
-                            Hello World!
+                            I am an undergraduate student at the University of British Columbia studying Computer Engineering. I am a committed worker with an eagerness to learn and grow through experience. I strive to further my knowledge in the tech industry and am always looking forward to learning something new.
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <SocialButtons height="24px" width="24px" />
+                        <SocialButtons height="24px" width="24px" color='primary' />
                     </CardActions>
                 </Card>
             </Box>

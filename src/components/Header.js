@@ -1,9 +1,9 @@
-import { AppBar, Avatar, Toolbar, Typography } from '@mui/material';
+import { AppBar, Avatar, Toolbar, Typography, MenuItem } from '@mui/material';
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 
 
-function Header() {
+function Header(props) {
     const navigate = useNavigate();
 
     return (
@@ -27,6 +27,16 @@ function Header() {
                 >
                     Bell Chen
                 </Typography>
+
+                <MenuItem key={"About"} onClick={(e) => { navigate("/about") }}>
+                    <Typography textAlign="center" textTransform='uppercase'>About</Typography>
+                </MenuItem>
+                <MenuItem key={"Projects"} onClick={(e) => { navigate("/projects") }}>
+                    <Typography textAlign="center" textTransform='uppercase'>Projects</Typography>
+                </MenuItem>
+                <MenuItem key={"Contact"} onClick={(e) => { navigate("/contact") }}>
+                    <Typography textAlign="center" textTransform='uppercase'>Contact</Typography>
+                </MenuItem>
             </Toolbar>
         </AppBar>
     )

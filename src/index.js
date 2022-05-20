@@ -1,4 +1,4 @@
-import { CircularProgress } from '@mui/material';
+import { Box, CircularProgress } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
@@ -21,31 +21,50 @@ const theme = createTheme({
   palette: {
     // mode: 'dark',
     primary: {
-      light: '#78d3ff',
-      main: '#31a2ff',
-      dark: '#0074cb',
-      contrastText: '#fff',
+      light: '#63a4ff',
+      main: '#1976d2',
+      dark: '#004ba0',
+      contrastText: '#ffffff',
     },
     secondary: {
-      light: '#6d86ff',
-      main: '#205AE8',
-      dark: '#0032b5',
-      contrastText: '#fff',
+      light: '#7cccff',
+      main: '#389cff',
+      dark: '#006ecb',
+      contrastText: '#000000',
     },
+    white: {
+      light: '#fff',
+      main: '#fff',
+      dark: '#fff',
+      contrastText: '#000',
+    },
+    black: {
+      light: '#000',
+      main: '#000',
+      dark: '#000',
+      contrastText: '#fff',
+    }
   }
 });
+
+const progress = (
+  <Box alignItems="center" justifyContent="center" sx={{ display: 'flex', height: "100vh" }}>
+    <CircularProgress />
+  </Box>
+)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
    <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Suspense fallback={<CircularProgress />}>
+        <Suspense fallback={progress}>
           <Routes>
             <Route path="/" element={<App />}></Route>
             <Route path="about" element={<About />}></Route>
             <Route path="projects" element={<Projects />}></Route>
             <Route path="contact" element={<Contact />}></Route>
+            <Route path="*" element={progress}></Route>
           </Routes>
         </Suspense>
       </BrowserRouter>

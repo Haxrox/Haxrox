@@ -20,7 +20,7 @@ function App() {
 
           <Grid item>
             <Typography variant="h2" fontWeight="bold" textTransform='uppercase' color='primary.contrastText'>
-              Bell Chen
+              Bell Chen (WIP)
             </Typography>
           </Grid>
 
@@ -38,7 +38,7 @@ function App() {
                 <SocialButtons />
               </Grid>
               {/* <Grid item>
-                <SocialButton label="LinkedIn" url="https://www.linkedin.com/in/bell-chen/" icon = "/icons/linkedin.svg"/>
+                <SocialButton label="LinkedIn" url="https://www.linkedin.com/in/bell-chen/" icon = "/icons/LinkedIn.svg"/>
               </Grid>
 
               <Grid item>
