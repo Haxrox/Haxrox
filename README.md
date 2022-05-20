@@ -2,7 +2,7 @@
 
 I'm currently a second year Computer Engineering student at The University of British Columbia. 
 
-Check out some of my projects below!
+Check out some of my projects below or under the **[repositories](https://github.com/Haxrox?tab=repositories)** tab!
 
 <!--
 **Haxrox/Haxrox** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
