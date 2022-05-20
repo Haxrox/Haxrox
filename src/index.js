@@ -20,6 +20,7 @@ const Projects = lazy(() => import('./pages/Projects.js'));
 const theme = createTheme({
   palette: {
     // mode: 'dark',
+    // '1976d2'
     primary: {
       light: '#78d3ff',
       main: '#31a2ff',
@@ -30,6 +31,18 @@ const theme = createTheme({
       light: '#6d86ff',
       main: '#205AE8',
       dark: '#0032b5',
+      contrastText: '#fff',
+    },
+    white: {
+      light: '#fff',
+      main: '#fff',
+      dark: '#fff',
+      contrastText: '#000',
+    },
+    black: {
+      light: '#000',
+      main: '#000',
+      dark: '#000',
       contrastText: '#fff',
     }
   }

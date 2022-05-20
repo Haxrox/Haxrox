@@ -19,7 +19,7 @@ function About() {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <SocialButtons height="24px" width="24px" />
+                        <SocialButtons height="24px" width="24px" color='primary' />
                     </CardActions>
                 </Card>
             </Box>

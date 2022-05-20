@@ -38,7 +38,7 @@ function App() {
                 <SocialButtons />
               </Grid>
               {/* <Grid item>
-                <SocialButton label="LinkedIn" url="https://www.linkedin.com/in/bell-chen/" icon = "/icons/linkedin.svg"/>
+                <SocialButton label="LinkedIn" url="https://www.linkedin.com/in/bell-chen/" icon = "/icons/LinkedIn.svg"/>
               </Grid>
 
               <Grid item>
