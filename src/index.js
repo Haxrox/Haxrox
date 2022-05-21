@@ -7,6 +7,8 @@ import {
 } from "react-router-dom";
 import App from './App';
 import './index.css';
+import PROJECTS from './Projects-db';
+import { Project } from './components/Project.js';
 import reportWebVitals from './reportWebVitals';
 
 // import About from './pages/About.js';
@@ -60,11 +62,12 @@ root.render(
       <BrowserRouter>
         <Suspense fallback={progress}>
           <Routes>
-            <Route path="/" element={<App />}></Route>
-            <Route path="about" element={<About />}></Route>
-            <Route path="projects" element={<Projects />}></Route>
-            <Route path="contact" element={<Contact />}></Route>
-            <Route path="*" element={progress}></Route>
+            <Route path="/" element={<App />}/>
+            <Route path="about" element={<About />}/>
+            <Route path="projects" element={<Projects />}/>
+            <Route path="contact" element={<Contact />}/>
+            <Route path="*" element={progress}/>
+            {PROJECTS.map((project, index) => <Route path={`/projects/${project.title.replaceAll(" ", "%20")}`} element={<Project details={project} prev={index > 0 && PROJECTS[index - 1]} next={index < PROJECTS.length - 1 && PROJECTS[index + 1]}/>} key={index}/>)}
           </Routes>
         </Suspense>
       </BrowserRouter>

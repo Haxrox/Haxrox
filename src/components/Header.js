@@ -2,6 +2,7 @@ import { AppBar, Avatar, Toolbar, Typography, MenuItem } from '@mui/material';
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 
+const TABS = ['about', 'projects', 'contact']
 
 function Header(props) {
     const navigate = useNavigate();
@@ -22,21 +23,17 @@ function Header(props) {
                         px: 2,
                         color: 'inherit',
                         textDecoration: 'none',
+                        display: {xs: 'none', sm: 'block' }
                     }}
                     onClick={(e) => { e.preventDefault(); navigate("/") }}
                 >
                     Bell Chen
                 </Typography>
 
-                <MenuItem key={"About"} onClick={(e) => { navigate("/about") }}>
-                    <Typography textAlign="center" textTransform='uppercase'>About</Typography>
-                </MenuItem>
-                <MenuItem key={"Projects"} onClick={(e) => { navigate("/projects") }}>
-                    <Typography textAlign="center" textTransform='uppercase'>Projects</Typography>
-                </MenuItem>
-                <MenuItem key={"Contact"} onClick={(e) => { navigate("/contact") }}>
-                    <Typography textAlign="center" textTransform='uppercase'>Contact</Typography>
-                </MenuItem>
+                {props.tab ? TABS.map((tab) => <MenuItem key={tab} onClick={(e) => { navigate(`/${tab}`) }}>
+                    <Typography textAlign="center" textTransform='uppercase'>{tab}</Typography>
+                </MenuItem>) : null
+                }                
             </Toolbar>
         </AppBar>
     )
