@@ -10,7 +10,7 @@ function About() {
         <Box className="About">
             <Header tab="about"></Header>
             <Stack spacing={5} sx={{ p: 2, mt: 2 }}>
-                <AboutCard title="About">
+                <AboutCard title="About Me!">
                     <Typography variant="body1">
                         I am an undergraduate student at the University of British Columbia studying Computer Engineering. I am a committed worker with an eagerness to learn and grow through experience. I strive to further my knowledge in the tech industry and am always looking forward to learning something new.
                     </Typography>
@@ -60,13 +60,10 @@ function About() {
                             </CardActionArea>
                         </Card>
                     </Stack>
-
-
-
-
                 </AboutCard>
                 <AboutCard title="Tech Stack">
                     <Typography variant="body1">
+                        {/* FIX FORMATTING */}
                         Programming Languages: C, C++, Java, Python, Node.js, Assembly, JavaScript, TypeScript, Flutter, React, HTML, CSS
                         <br />
                         Hardware: Arduino, Raspberry Pi, Adafruit ItsyBitsy, Verilog, FPGA, Oscilloscope, Soldering
@@ -78,7 +75,6 @@ function About() {
                         IDEs: Visual Studio Code, Visual Studio, IntelliJ IDEA, Android Studio, Arduino IDE
                         <br />
                         Software: Adobe Photoshop, Indesign Illustrator, Microsoft Office, Google Workspace
-
 
                     </Typography>
                 </AboutCard>
