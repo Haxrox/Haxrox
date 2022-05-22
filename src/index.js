@@ -6,9 +6,9 @@ import {
   BrowserRouter, Route, Routes
 } from "react-router-dom";
 import App from './App';
+import { Project } from './components/Project.js';
 import './index.css';
 import PROJECTS from './Projects-db';
-import { Project } from './components/Project.js';
 import reportWebVitals from './reportWebVitals';
 
 // import About from './pages/About.js';
@@ -67,7 +67,7 @@ root.render(
             <Route path="projects" element={<Projects />}/>
             <Route path="contact" element={<Contact />}/>
             <Route path="*" element={progress}/>
-            {PROJECTS.map((project, index) => <Route path={`/projects/${project.title.replaceAll(" ", "%20")}`} element={<Project details={project} prev={index > 0 && PROJECTS[index - 1]} next={index < PROJECTS.length - 1 && PROJECTS[index + 1]}/>} key={index}/>)}
+            {PROJECTS.map((project, index) => <Route path={`/projects/${project.title.replaceAll(" ", "%20")}`} element={<Project {...project} prev={index > 0 && PROJECTS[index - 1]} next={index < PROJECTS.length - 1 && PROJECTS[index + 1]} />} key={index} />)}
           </Routes>
         </Suspense>
       </BrowserRouter>

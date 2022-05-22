@@ -153,7 +153,7 @@ function Project(props) {
 
     return (
         <Box>
-            <Header />
+            <Header tab={props.title} />
             <Box sx={{ p: 2, pb: 10 }}>
                 <p>WIP</p>
             </Box>

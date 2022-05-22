@@ -21,7 +21,6 @@ function Projects() {
                 {PROJECTS.map((project, index) =>
                     <Grid item key={index}>
                         <ProjectCard {...project} navigate={() => {
-                            console.log("Set project");
                             setProject(project);
                             navigate(project.title);
                         }} />               
