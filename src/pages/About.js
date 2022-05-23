@@ -10,7 +10,7 @@ function About() {
         <Box className="About">
             <Header tab="about"></Header>
             <Stack spacing={5} sx={{ p: 2, mt: 2 }}>
-                <AboutCard title="About Me!">
+                <AboutCard title="About Me">
                     <Typography variant="body1">
                         I am an undergraduate student at the University of British Columbia studying Computer Engineering. I am a committed worker with an eagerness to learn and grow through experience. I strive to further my knowledge in the tech industry and am always looking forward to learning something new.
                     </Typography>
@@ -19,7 +19,7 @@ function About() {
                     <Stack spacing={2}>
                         <Card >
                             <CardActionArea href="https://www.ubc.ca/" sx={{ display: 'flex' }}>
-                                <CardMedia component="img" sx={{ maxWidth: 128 }} image="https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_200_200/0/1568742934345?e=1661385600&v=beta&t=zIWcbajJThsUIGkgE2sXxdDj9IB1l_x4rCjM9sBP-jc" alt="Logo" />
+                                <CardMedia component="img" sx={{ maxWidth: 108 }} image="https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_200_200/0/1568742934345?e=1661385600&v=beta&t=zIWcbajJThsUIGkgE2sXxdDj9IB1l_x4rCjM9sBP-jc" alt="Logo" />
                                 <CardContent sx={{ width: "100%", p: 2 }}>
                                     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                                         <Typography variant="h6">
@@ -40,7 +40,7 @@ function About() {
                         </Card>
                         <Card >
                             <CardActionArea href="https://www.sfu.ca/" sx={{ display: 'flex' }}>
-                                <CardMedia component="img" sx={{ maxWidth: 128 }} image="https://media-exp1.licdn.com/dms/image/C560BAQFmEh_g4lXQ-g/company-logo_200_200/0/1628103379432?e=1661385600&v=beta&t=WggqaRFCftgiEQtdBqRTEv25wFglpFwtSQHQOn8YXPA" alt="Logo" />
+                                <CardMedia component="img" sx={{ maxWidth: 108 }} image="https://media-exp1.licdn.com/dms/image/C560BAQFmEh_g4lXQ-g/company-logo_200_200/0/1628103379432?e=1661385600&v=beta&t=WggqaRFCftgiEQtdBqRTEv25wFglpFwtSQHQOn8YXPA" alt="Logo" />
                                 <CardContent sx={{ width: "100%", p: 2 }}>
                                     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                                         <Typography variant="h6" component="Box">
@@ -64,18 +64,19 @@ function About() {
                 <AboutCard title="Tech Stack">
                     <Typography variant="body1">
                         {/* FIX FORMATTING */}
-                        Programming Languages: C, C++, Java, Python, Node.js, Assembly, JavaScript, TypeScript, Flutter, React, HTML, CSS
+                        <b>Programming Languages:</b> C, C++, Java, Python, Node.js, Assembly, JavaScript, TypeScript, Flutter, React, HTML, CSS
                         <br />
-                        Hardware: Arduino, Raspberry Pi, Adafruit ItsyBitsy, Verilog, FPGA, Oscilloscope, Soldering
+                        <b>Hardware:</b> Arduino, Raspberry Pi, Adafruit ItsyBitsy, Verilog, FPGA, Oscilloscope, Soldering
                         <br />
-                        Cloud Software: Microsoft Azure Virtual Machine, Cloud Functions, Google Cloud App Engine, Compute Engine, Natural Language Processing, Firebase Firestore, Hosting, Authentication, AWS AppSync, Amazon Elastic Compute (EC2), Relational Database (RDS), SSH, SCP
+                        <b>Cloud Software:</b> Microsoft Azure Virtual Machine, Cloud Functions, Google Cloud App Engine, Compute Engine, Natural Language Processing, Firebase Firestore, Hosting, Authentication, AWS AppSync, Amazon Elastic Compute (EC2), Relational Database (RDS), SSH, SCP
                         <br />
-                        Programs: Git, GitHub, BASH, PowerShell, Quartus, ModelSim, SOLIDWORKS, MATLAB, GDB, Make, Valgrind, Quartus, ModelSim, Jupyter Notebook
+                        <b>Programs:</b> Git, GitHub, BASH, PowerShell, Quartus, ModelSim, SOLIDWORKS, MATLAB, GDB, Make, Valgrind, Quartus, ModelSim, Jupyter Notebook
                         <br />
-                        IDEs: Visual Studio Code, Visual Studio, IntelliJ IDEA, Android Studio, Arduino IDE
+                        <b>Web Languages: </b>Flutter, React, HTML, CSS
                         <br />
-                        Software: Adobe Photoshop, Indesign Illustrator, Microsoft Office, Google Workspace
-
+                        <b>IDEs:</b> Visual Studio Code, Visual Studio, IntelliJ IDEA, Android Studio, Arduino IDE
+                        <br />
+                        <b>Software:</b> Adobe Photoshop, Indesign Illustrator, Microsoft Office, Google Workspace
                     </Typography>
                 </AboutCard>
                 {/* <AboutCard title="Skills">
