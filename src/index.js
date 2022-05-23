@@ -11,14 +11,8 @@ import './index.css';
 import PROJECTS from './Projects-db';
 import reportWebVitals from './reportWebVitals';
 
-// import About from './pages/About.js';
-// import Contact from './pages/Contact.js';
-// import Projects from './pages/Projects.js';
-
-const About = lazy(() => import('./pages/About.js'));
-const Contact = lazy(() => import('./pages/Contact.js'));
-const Projects = lazy(() => import('./pages/Projects.js'));
-
+const About = lazy(() => import("./pages/About.js"));
+const Projects = lazy(() => import("./pages/Projects.js"));
 const theme = createTheme({
   palette: {
     // mode: 'dark',
@@ -62,10 +56,12 @@ root.render(
       <BrowserRouter>
         <Suspense fallback={progress}>
           <Routes>
-            <Route path="/" element={<App />}/>
-            <Route path="about" element={<About />}/>
-            <Route path="projects" element={<Projects />}/>
-            <Route path="contact" element={<Contact />}/>
+            <Route path="/" element={<App />} />
+            {/* {Object.entries(Pages).map((page, pageElement) => 
+              <Route path={page} key={page} element={<pageElement />} />
+            )} */}
+            <Route path="about" element={<About />} />
+            <Route path="projects" element={<Projects />} />
             <Route path="*" element={progress}/>
             {PROJECTS.map((project, index) => <Route path={`/projects/${project.title.replaceAll(" ", "%20")}`} element={<Project {...project} prev={index > 0 && PROJECTS[index - 1]} next={index < PROJECTS.length - 1 && PROJECTS[index + 1]} />} key={index} />)}
           </Routes>

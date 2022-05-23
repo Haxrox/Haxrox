@@ -1,4 +1,4 @@
-import { NavigateBefore, NavigateNext } from '@mui/icons-material';
+import { NavigateBefore } from '@mui/icons-material';
 import { Box, Grid } from '@mui/material';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -31,10 +31,6 @@ function Projects() {
             <NavigateButton href='/about' left='16px'>
                 <NavigateBefore />
                 About
-            </NavigateButton>
-            <NavigateButton href='/contact' right='16px'>
-                Contact
-                <NavigateNext />
             </NavigateButton>
         </Box>
     );

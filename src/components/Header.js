@@ -2,7 +2,7 @@ import { AppBar, Avatar, MenuItem, Toolbar, Typography } from '@mui/material';
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 
-const TABS = ['about', 'projects', 'contact']
+import Pages from '../pages/index.js';
 
 function Header(props) {
     const navigate = useNavigate();
@@ -35,8 +35,8 @@ function Header(props) {
                     Bell Chen
                 </Typography>
 
-                {props.tab ? TABS.map((tab) => <MenuItem key={tab} onClick={(e) => { navigate(`/${tab}`) }}>
-                    <Typography textAlign="center" textTransform='uppercase'>{tab}</Typography>
+                {props.tab ? Pages.map(page => <MenuItem key={page} onClick={(e) => { navigate(`/${page.toLowerCase()}`) }}>
+                    <Typography textAlign="center" textTransform='uppercase'>{page}</Typography>
                 </MenuItem>) : null
                 }                
             </Toolbar>

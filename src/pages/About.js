@@ -3,6 +3,7 @@ import { Box, Card, CardActionArea, CardContent, CardMedia, Link, Stack, Typogra
 import AboutCard from '../components/AboutCard.js';
 import Header from '../components/Header.js';
 import NavigateButton from '../components/NavigationButton.js';
+import { SocialButtons } from '../components/SocialButton.js';
 
 // TODO: include education + courses (?)
 function About() {
@@ -43,10 +44,10 @@ function About() {
                                 <CardMedia component="img" sx={{ maxWidth: 108 }} image="https://media-exp1.licdn.com/dms/image/C560BAQFmEh_g4lXQ-g/company-logo_200_200/0/1628103379432?e=1661385600&v=beta&t=WggqaRFCftgiEQtdBqRTEv25wFglpFwtSQHQOn8YXPA" alt="Logo" />
                                 <CardContent sx={{ width: "100%", p: 2 }}>
                                     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                                        <Typography variant="h6" component="Box">
+                                        <Typography variant="h6" >
                                             Simon Fraser University
                                         </Typography>
-                                        <Typography variant="subtitle1" component="Box" >
+                                        <Typography variant="subtitle1"  >
                                             September 2019 - December, 2019
                                         </Typography>
                                     </Box>
@@ -79,11 +80,9 @@ function About() {
                         <b>Software:</b> Adobe Photoshop, Indesign Illustrator, Microsoft Office, Google Workspace
                     </Typography>
                 </AboutCard>
-                {/* <AboutCard title="Skills">
-                    <Typography variant="body1">
-                        I am an undergraduate student at the University of British Columbia studying Computer Engineering. I am a committed worker with an eagerness to learn and grow through experience. I strive to further my knowledge in the tech industry and am always looking forward to learning something new.
-                    </Typography>
-                </AboutCard> */}
+                <AboutCard title="Contact">
+                    <SocialButtons color='primary'/>
+                </AboutCard>
             </Stack>
 
             <NavigateButton href='/projects' right='16px'>

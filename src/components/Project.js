@@ -230,8 +230,8 @@ function ProjectCard(props) {
                                         label={element}
                                         // avatar={avatar}
                                         component={metadata && "a"}
-                                        href={metadata?.url}
-                                        clickable={metadata?.url !== undefined}
+                                        // href={metadata?.url}
+                                        // clickable={metadata?.url !== undefined}
                                     // color={metadata?.color}
                                     />
                                 </Grid>

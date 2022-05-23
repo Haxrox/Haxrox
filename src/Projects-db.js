@@ -5,7 +5,7 @@ const PROJECTS = [
         type: "Personal Project - Hardware + Software",
         shortDescription: "Rover built using a Raspberry Pi Zero W running Ubuntu Desktop 32-bit, motor driver, camera module, and 2 servo motors",
         longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['Raspberry Pi', 'Python', 'Android Studio', 'Java', 'Linux', 'BlueZ', 'Bluetooth Low Energy', 'DBus', 'BASH'
+        techStack: ['Raspberry Pi', 'Python', 'Linux', 'BlueZ', 'Bluetooth Low Energy', 'DBus', 'BASH', 'Android Studio', 'Java'
         ],
         url: [
             {
@@ -20,8 +20,7 @@ const PROJECTS = [
         type: "Personal Project - Software",
         shortDescription: "Discord utility bot written in Node.js hosted on a Microsoft Azure Standard B1 Linux Virtual Machine running Ubuntu Server 16.04-LTS",
         longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['Microsoft Azure Virtual Machine', 'Linux', 'BASH', 'Node.js', 'Web Scraping'
-        ],
+        techStack: ['Microsoft Azure Virtual Machine', 'Linux', 'BASH', 'Node.js'],
         url: [
             {
                 type: "GitHub",
@@ -50,8 +49,7 @@ const PROJECTS = [
         type: "Personal Project - Software",
         shortDescription: "Android BLE chatting app",
         longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['Java', 'Android', 'Bluetooth Low Energy', 'AWS AppSync', 'AWS Amplify Datastore'
-        ],
+        techStack: ['Android Studio', 'Java',  'Bluetooth Low Energy', 'AWS AppSync', 'AWS Amplify Datastore'],
         url: []
     },
     {
@@ -60,8 +58,7 @@ const PROJECTS = [
         type: "Personal Project - Software",
         shortDescription: "Portfolio with all my personal projects",
         longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['Firebase Hosting', 'React', 'JavaScript', 'GitHub Actions'
-        ],
+        techStack: ['React', 'JavaScript', 'Firebase Hosting', 'GitHub Actions'],
         url: [
             {
                 type: "GitHub",
@@ -89,8 +86,7 @@ const PROJECTS = [
         type: "UBC Launchpad - Software",
         shortDescription: "Web application* to help users organize and follow playlists of exercises *NOTE: must accept backend certificate to view videos",
         longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['Flutter', 'Node.js', 'Express.js', 'Sequelize', 'PostgreSQL', 'Firebase Hosting', 'GitHub Actions', 'Amazon Elastic Compute (EC2)', 'Amazon Relational Database Service (RDS)'
-        ],
+        techStack: ['Flutter', 'Node.js', 'Express.js', 'Firebase Hosting', 'GitHub Actions', 'Amazon Elastic Compute', 'Sequelize', 'PostgreSQL', 'Amazon Relational Database Service'],
         url: [
             {
                 type: "GitHub",
@@ -112,7 +108,7 @@ const PROJECTS = [
         type: "UBC CPEN 291 - Hardware + Software",
         shortDescription: "Biped Robot that dances to a variety of songs using an ItsyBitsy M4 microcontroller, servo motors, colour TFT LCD, piezo buzzer, 3x4 numeric matrix keypad",
         longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['ItsyBitsy', 'CircuitPython'
+        techStack: ['ItsyBitsy M4 Express Microcontroller', 'CircuitPython'
         ],
         url: [
             {
@@ -127,8 +123,7 @@ const PROJECTS = [
         type: "nwHacks Hackathon - Hardware + Software",
         shortDescription: "Web application to help students find or reserve seats in common study areas",
         longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['Firebase Firestore', 'Firebase Hosting', 'Firebase Authentication', 'React', 'Bootstrap', 'JavaScript'
-        ],
+        techStack: ['React', 'Bootstrap', 'JavaScript', 'Firebase Firestore', 'Firebase Hosting', 'Firebase Authentication'],
         url: [
             {
                 type: "GitHub",
@@ -146,8 +141,7 @@ const PROJECTS = [
         type: "UBC CPEN 211 - Hardware",
         shortDescription: "Reduced Instruction Set Computer (RISC) written in Verilog on an Intel FPGA DE1-SoC",
         longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['Assembly', 'Verilog', 'FPGA', 'Quartus', 'ModelSim'
-        ],
+        techStack: ['Verilog', 'FPGA', 'Quartus', 'ModelSim', 'Assembly'],
         url: []
     },
     {
@@ -156,8 +150,7 @@ const PROJECTS = [
         type: "UBC CPEN 221 - Software",
         shortDescription: "Used Java, OOP, algorithm efficiency, concurrency, multithreading, and big data processing concepts to code algorithms for a series of tasks",
         longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['Java', 'IntelliJ IDEA'
-        ],
+        techStack: ['Java', 'IntelliJ IDEA'],
         url: []
     },
     {
@@ -166,8 +159,7 @@ const PROJECTS = [
         type: "Personal Project - Software",
         shortDescription: "Android application that uses the Opus Codec to encode and decode audio data to send to another another device using BLE",
         longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['Java', 'Android Studio', 'Bluetooth Low Energy', 'Opus Codec'
-        ],
+        techStack: ['Java', 'Android Studio', 'Bluetooth Low Energy', 'Opus Codec'],
         url: []
     },
     {
@@ -176,8 +168,7 @@ const PROJECTS = [
         type: "Personal Project - Software",
         shortDescription: "Android application that uses the Opus Codec to encode and decode audio data",
         longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['Java', 'Android Studio', 'Opus Codec'
-        ],
+        techStack: ['Java', 'Android Studio', 'Opus Codec'],
         url: [
             {
                 type: "GitHub",
@@ -191,8 +182,7 @@ const PROJECTS = [
         type: "Personal Project - Software",
         shortDescription: "Android application Button Masher game",
         longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['Java', 'Android Studio', 'Firebase Firestore'
-        ],
+        techStack: ['Java', 'Android Studio', 'Firebase Firestore'],
         url: [
             {
                 type: "GitHub",
@@ -206,8 +196,7 @@ const PROJECTS = [
         type: "UBC APSC 101 - Hardware",
         shortDescription: "Claw manufactured out of household items to pick up multifarious items",
         longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['C', 'Arduino'
-        ],
+        techStack: ['C', 'Arduino Uno', 'Arduino IDE'],
         url: [
             {
                 type: "GitHub",

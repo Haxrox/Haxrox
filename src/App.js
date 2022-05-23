@@ -2,8 +2,10 @@ import { Avatar, Box, Button, ButtonGroup, Grid, Typography } from '@mui/materia
 import { useNavigate } from "react-router-dom";
 import './App.css';
 import { SocialButtons } from './components/SocialButton.js';
+import Pages from './pages/index.js';
 
 function App() {
+  console.log(Object.keys(Pages));
   const navigate = useNavigate();
 
   const navigatePage = (e) => {
@@ -26,9 +28,9 @@ function App() {
 
           <Grid item alignItems="center" justifyContent="center">
             <ButtonGroup variant="contained" aria-label="outlined button group" color='secondary'>
-              <Button id="about" onClick={navigatePage} sx={{ width: 128 }}>About</Button>
-              <Button id="projects" onClick={navigatePage} sx={{ width: 128 }}>Projects</Button>
-              <Button id="contact" onClick={navigatePage} sx={{ width: 128 }}>Contact</Button>
+              {Pages.map(page =>
+                <Button id={page.toLowerCase()} key={page} onClick={navigatePage} sx={{ width: 128 }}>{page}</Button>
+              )}
             </ButtonGroup>
           </Grid>
 
