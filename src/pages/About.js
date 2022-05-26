@@ -20,7 +20,7 @@ function About() {
                     <Stack spacing={2}>
                         <Card >
                             <CardActionArea href="https://www.ubc.ca/" sx={{ display: 'flex' }}>
-                                <CardMedia component="img" sx={{ maxWidth: 108 }} image="https://media-exp1.licdn.com/dms/image/C4E0BAQH415qlDBkj8Q/company-logo_200_200/0/1568742934345?e=1661385600&v=beta&t=zIWcbajJThsUIGkgE2sXxdDj9IB1l_x4rCjM9sBP-jc" alt="Logo" />
+                                <CardMedia component="img" sx={{ maxWidth: 108 }} image="icons/UBC.jfif" alt="Logo" />
                                 <CardContent sx={{ width: "100%", p: 2 }}>
                                     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                                         <Typography variant="h6">
@@ -41,7 +41,7 @@ function About() {
                         </Card>
                         <Card >
                             <CardActionArea href="https://www.sfu.ca/" sx={{ display: 'flex' }}>
-                                <CardMedia component="img" sx={{ maxWidth: 108 }} image="https://media-exp1.licdn.com/dms/image/C560BAQFmEh_g4lXQ-g/company-logo_200_200/0/1628103379432?e=1661385600&v=beta&t=WggqaRFCftgiEQtdBqRTEv25wFglpFwtSQHQOn8YXPA" alt="Logo" />
+                                <CardMedia component="img" sx={{ maxWidth: 108 }} image="icons/SFU.jfif" alt="Logo" />
                                 <CardContent sx={{ width: "100%", p: 2 }}>
                                     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                                         <Typography variant="h6" >
