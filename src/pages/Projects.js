@@ -22,7 +22,7 @@ function Projects() {
                     <Grid item key={index}>
                         <ProjectCard {...project} navigate={() => {
                             setProject(project);
-                            navigate(project.title);
+                            navigate(project.title.replaceAll(" ", "-"));
                         }} />               
                     </Grid>
                 )}

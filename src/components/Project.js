@@ -177,13 +177,14 @@ function Technologies(props) {
 
 function Information(props) {
     return (
-        <Stack direction="row" spacing={2} sx={{ mb: -2 }}>
+        <Stack direction="row" spacing={2}>
             {props.url.map((url, index) =>
                 <SocialButton key={index} label={url.type} tooltip={url.tooltip || ACTION_ICONS[url.type]?.tooltip} icon={ACTION_ICONS[url.type]?.icon} url={url.href} height="24px" width="24px" color="primary" />
             )}
         </Stack>
     )
 }
+
 function Project(props) {
     return (
         <Box>
@@ -210,21 +211,21 @@ function Project(props) {
                     }
                     <Technologies titleVariant="h6" techStack={props.techStack} />
                     {props?.url.length > 0 ?
-                        <Box>
-                            <Divider />
-                            <Information url={props.url} />
+                        <Box sx={{mb: -2}}>
+                            <Divider sx={{ mb: 1 }}/>
+                            <Information url={props.url}/>
                         </Box> : null
                     }
                 </AboutCard>
             </Box>
             {props.prev ?
-                <NavigateButton href={`/projects/${props.prev.title.replaceAll(" ", "%20")}`} left='16px'>
+                <NavigateButton href={`/projects/${props.prev.title.replaceAll(" ", "-")}`} left='16px'>
                     <NavigateBefore />
                     {props.prev.title}
                 </NavigateButton> : null
             }
             {props.next ?
-                <NavigateButton href={`/projects/${props.next.title.replaceAll(" ", "%20")}`} right='16px'>
+                <NavigateButton href={`/projects/${props.next.title.replaceAll(" ", "-")}`} right='16px'>
                     {props.next.title}
                     <NavigateNext />
                 </NavigateButton> : null
@@ -254,7 +255,7 @@ function ProjectCard(props) {
         /** 
          * Add filter tab here. Use grid layout (?)
          */
-        <Card raised={expanded} sx={{ position: 'relative', width: 350, minHeight: 500 }} onMouseEnter={handleExpand} onMouseLeave={handleContract}>
+        <Card raised={expanded} sx={{ position: 'relative', width: 350, minHeight: 430 }} onMouseEnter={handleExpand} onMouseLeave={handleContract}>
             <CardActionArea sx={{ minHeight: "100%" }} onClick={props.navigate}>
                 <CardContent>
                     <Typography variant="h5">

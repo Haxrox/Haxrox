@@ -3,9 +3,8 @@ const PROJECTS = [
         title: "HaxRover",
         date: "May 2022 - Present",
         type: "Personal Project - Hardware + Software",
-        shortDescription: "Rover built using a Raspberry Pi Zero W running Ubuntu Desktop 32-bit, motor driver, camera module, and 2 servo motors",
+        shortDescription: "BLE Rover built using a Raspberry Pi Zero W running Ubuntu Desktop 32-bit, motor driver, camera module, and 2 servo motors",
         tasks: [
-            "Building a rover using a Raspberry Pi Zero W running Ubuntu Desktop 32-bit, motor driver, camera module, and 2 servo motors",
             "Developing an Android app in Java to remotely control the rover and view live - video feed through BLE",
             "Using BlueZ and dbus - python library to create a BLE advertiser and GATT Server in Python and writing a state machine to control rover movement and BLE commands concurrently"
         ],
