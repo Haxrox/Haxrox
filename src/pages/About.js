@@ -73,11 +73,13 @@ function About() {
                         <br />
                         <b>Programs:</b> Git, GitHub, BASH, PowerShell, Quartus, ModelSim, SOLIDWORKS, MATLAB, GDB, Make, Valgrind, Quartus, ModelSim, Jupyter Notebook
                         <br />
-                        <b>Web Languages: </b>Flutter, React, HTML, CSS
+                        <b>Web Languages: </b>React, Flutter, HTML, CSS
                         <br />
                         <b>IDEs:</b> Visual Studio Code, Visual Studio, IntelliJ IDEA, Android Studio, Arduino IDE
                         <br />
                         <b>Software:</b> Adobe Photoshop, Indesign Illustrator, Microsoft Office, Google Workspace
+                        <br />
+                        <b>Concepts:</b> Bluetooth Low Energy (BLE), Concurrency, Multi-threading, Networking, Caches, Heaps, Garbage Collection, Local Hax, Files
                     </Typography>
                 </AboutCard>
                 <AboutCard title="Contact">

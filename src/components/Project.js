@@ -1,7 +1,8 @@
 import { Android, Api, Css, GitHub, Html, Javascript, NavigateBefore, NavigateNext, Web } from '@mui/icons-material';
-import { Backdrop, Box, Card, CardActionArea, CardActions, CardContent, Chip, Collapse, Divider, Grid, Typography } from '@mui/material';
+import { Backdrop, Box, Card, CardActionArea, CardActions, CardContent, Chip, Collapse, Divider, Grid, Stack, Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React from 'react';
+import AboutCard from './AboutCard.js';
 import Header from './Header.js';
 import NavigateButton from './NavigationButton.js';
 import { SocialButton } from './SocialButton.js';
@@ -41,7 +42,7 @@ const CHIP_DATA = {
     },
     "JavaScript": {
         url: "https://www.javascript.com/",
-        icon: <Javascript color="JavaScript"/>,
+        icon: <Javascript color="JavaScript" />,
         color: "JavaScript"
     },
     "Flutter": {
@@ -61,7 +62,7 @@ const CHIP_DATA = {
     },
     "Android Studio": {
         url: "https://developer.android.com/",
-        icon: <Android color = "Android"/>,
+        icon: <Android color="Android" />,
         color: "Android"
     },
     "Python": {
@@ -145,17 +146,76 @@ const CHIP_THEME = createTheme({
     }
 });
 
-function Project(props) {
-    // const navigate = useNavigate();
-    // const location = useLocation();
-    // const navigationType = useNavigationType();
-    // console.log(navigationType);
+function Technologies(props) {
+    return (
+        <Box>
+            <Typography variant={props.titleVariant || 'body1'} sx={{ mb: 1 }}>
+                Technologies
+            </Typography>
+            <Grid container direction="row" spacing={1} sx={{ mb: 2 }}>
+                <ThemeProvider theme={CHIP_THEME}>
+                    {props.techStack.map((element, index) => {
+                        const metadata = CHIP_DATA[element];
+                        // const avatar = metadata?.icon && <Avatar alt={element} src={typeof (metadata.icon) === "string" ? metadata.icon : ""} sx={{ bgcolor: "transparent" }}>{metadata.icon}</Avatar>
+                        return <Grid item key={index}>
+                            <Chip
+                                key={index}
+                                label={element}
+                                // avatar={avatar}
+                                component={metadata && "a"}
+                            // href={metadata?.url}
+                            // clickable={metadata?.url !== undefined}
+                            // color={metadata?.color}
+                            />
+                        </Grid>
+                    })}
+                </ThemeProvider>
+            </Grid>
+        </Box>
+    )
+}
 
+function Information(props) {
+    return (
+        <Stack direction="row" spacing={2} sx={{ mb: -2 }}>
+            {props.url.map((url, index) =>
+                <SocialButton key={index} label={url.type} tooltip={url.tooltip || ACTION_ICONS[url.type]?.tooltip} icon={ACTION_ICONS[url.type]?.icon} url={url.href} height="24px" width="24px" color="primary" />
+            )}
+        </Stack>
+    )
+}
+function Project(props) {
     return (
         <Box>
             <Header tab={props.title} />
-            <Box sx={{ p: 2, pb: 10 }}>
-                <p>WIP</p>
+            <Box sx={{ p: 2, pb: 10, mt: 2 }}>
+                <AboutCard title={props.title}>
+                    <Typography >
+                        {props.shortDescription}
+                    </Typography>
+                    {props.page ? props.page : props?.tasks?.length > 0 ?
+                        props.tasks.map(task =>
+                            <Typography variant="body1" sx={{ ml: 1 }}>
+                                <li>{`${task}`}</li>
+                            </Typography>
+                            // <ListItem key={task} disablePadding>
+                            //     <ListItemIcon>
+                            //         <Circle color="primary"/>
+                            //     </ListItemIcon>
+                            //     <ListItemText variant="body1">
+                            //         {task}
+                            //     </ListItemText >
+                            // </ListItem>
+                        ) : null
+                    }
+                    <Technologies titleVariant="h6" techStack={props.techStack} />
+                    {props?.url.length > 0 ?
+                        <Box>
+                            <Divider />
+                            <Information url={props.url} />
+                        </Box> : null
+                    }
+                </AboutCard>
             </Box>
             {props.prev ?
                 <NavigateButton href={`/projects/${props.prev.title.replaceAll(" ", "%20")}`} left='16px'>
@@ -174,8 +234,6 @@ function Project(props) {
 }
 
 function ProjectDialog(props) {
-    // console.log("Render dialog");
-    // console.log(props);
     <Backdrop sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }} open={Object.keys(props).length > 0}>
         <Project {...props} />
     </Backdrop>
@@ -216,37 +274,17 @@ function ProjectCard(props) {
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <Divider variant="middle" />
                 <CardContent sx={{ spacing: 2 }}>
-                    <Typography variant='body1' sx={{ mb: 1 }}>
-                        Technologies
-                    </Typography>
-                    <Grid container direction="row" spacing={1}>
-                        <ThemeProvider theme={CHIP_THEME}>
-                            {props.techStack.map((element, index) => {
-                                const metadata = CHIP_DATA[element];
-                                // const avatar = metadata?.icon && <Avatar alt={element} src={typeof (metadata.icon) === "string" ? metadata.icon : ""} sx={{ bgcolor: "transparent" }}>{metadata.icon}</Avatar>
-                                return <Grid item key={index}>
-                                    <Chip
-                                        key={index}
-                                        label={element}
-                                        // avatar={avatar}
-                                        component={metadata && "a"}
-                                        // href={metadata?.url}
-                                        // clickable={metadata?.url !== undefined}
-                                    // color={metadata?.color}
-                                    />
-                                </Grid>
-                            })}
-                        </ThemeProvider>
-                    </Grid>
+                    <Technologies techStack={props.techStack} />
                     {/* <Chip label="Software" />
                         <Chip label="Hardware" />
                         <Chip label="School" /> */}
                 </CardContent>
             </Collapse>
             <CardActions sx={{ position: 'absolute', bottom: 0 }} disableSpacing>
-                {props.url?.map((url, index) =>
+                <Information url={props.url} />
+                {/* {props.url?.map((url, index) =>
                     <SocialButton key={index} label={url.type} icon={ACTION_ICONS[url.type]?.icon} url={url.href} height="24px" width="24px" color="primary" />
-                )}
+                )} */}
                 {/* <Button id="learn" onClick={navigateProject}>Learn More</Button> */}
                 {/* {props.url.map((url, index) =>
                     <Tooltip key={index} title={ACTION_ICONS[url.type]?.tooltip}>
