@@ -4,7 +4,11 @@ const PROJECTS = [
         date: "May 2022 - Present",
         type: "Personal Project - Hardware + Software",
         shortDescription: "Rover built using a Raspberry Pi Zero W running Ubuntu Desktop 32-bit, motor driver, camera module, and 2 servo motors",
-        longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
+        tasks: [
+            "Building a rover using a Raspberry Pi Zero W running Ubuntu Desktop 32-bit, motor driver, camera module, and 2 servo motors",
+            "Developing an Android app in Java to remotely control the rover and view live - video feed through BLE",
+            "Using BlueZ and dbus - python library to create a BLE advertiser and GATT Server in Python and writing a state machine to control rover movement and BLE commands concurrently"
+        ],
         techStack: ['Raspberry Pi', 'Python', 'Linux', 'BlueZ', 'Bluetooth Low Energy', 'DBus', 'BASH', 'Android Studio', 'Java'
         ],
         url: [
@@ -19,7 +23,11 @@ const PROJECTS = [
         date: "December 2021 - Present",
         type: "Personal Project - Software",
         shortDescription: "Discord utility bot written in Node.js hosted on a Microsoft Azure Standard B1 Linux Virtual Machine running Ubuntu Server 16.04-LTS",
-        longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
+        tasks: [
+            "Interact with the UBCGrades API using Chart.js, and Axios to display course grade information",
+            "Utilize Cheerio and Axios to web scrape course information from UBC course registration website",
+            "Contains a music command to play audio from a YouTube video in a Discord Voice call and implements Axios to call YouTube API backend endpoint to get video information"
+        ],
         techStack: ['Microsoft Azure Virtual Machine', 'Linux', 'BASH', 'Node.js'],
         url: [
             {
@@ -32,10 +40,12 @@ const PROJECTS = [
         title: "HaxFunctions",
         date: "December 2021 - Present",
         type: "Personal Project - Software",
-        shortDescription: "Serverless Backend API for redesigning GitHub Webhook message embeds in Discord",
-        longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['Microsoft Azure Cloud Functions', 'Node.js'
+        shortDescription: "Serverless Backend API on Microsoft Azure Cloud Functions for redesigning GitHub Webhook message embeds in Discord",
+        tasks: [
+            "Following GitHub Webhook documentations to understand payload data to redesign messages sent to Discord channels",
+            "Planning to connect Microsoft Azure Cosmo DB to serve as a backend database for personal projects for this website"
         ],
+        techStack: ['Microsoft Azure Cloud Functions', 'Node.js'],
         url: [
             {
                 type: "GitHub",
@@ -49,6 +59,11 @@ const PROJECTS = [
         type: "Personal Project - Software",
         shortDescription: "Android BLE chatting app",
         longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
+        tasks: [
+            "Program a BLE chatting app written in Java on the Android platform",
+            "Developing a test suite to validate apps correctness",
+            "Integrate AWS AppSync to query user data stored in AWS Amplify DataStore"
+        ],
         techStack: ['Android Studio', 'Java',  'Bluetooth Low Energy', 'AWS AppSync', 'AWS Amplify Datastore'],
         url: []
     },
@@ -57,7 +72,10 @@ const PROJECTS = [
         date: "May 2022",
         type: "Personal Project - Software",
         shortDescription: "Portfolio with all my personal projects",
-        longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
+        tasks: [
+            "Implemented MaterialUI library for frontend design",
+            "Configured react-router-dom for page navigation"
+        ],
         techStack: ['React', 'JavaScript', 'Firebase Hosting', 'GitHub Actions'],
         url: [
             {
@@ -75,9 +93,13 @@ const PROJECTS = [
         date: "March 2022 - April 2022",
         type: "UBC CPEN 291 - Hardware + Software",
         shortDescription: "Rover constructed using a Raspberry Pi Zero W running Raspberry Pi OS 32-bit, motor driver, 2 servo motors and camera module",
-        longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['Raspberry Pi', 'Python', 'Linux', 'WebSockets', 'Node.js', 'Express.js', 'HTML', 'CSS'
+        tasks: [
+            "Commanded in a way similar to Google Maps Street View",
+            "Designed the system diagrams, data flow, and control flow and delegated tasks to group members",
+            "Hosted a Node.js server on a UBC virtual machine with an express.js framework for sending frontend webpage to client and websockets to handle communication between frontend and rover",
+            "Wrote a state machine in Python to control rover movement"
         ],
+        techStack: ['Raspberry Pi', 'Python', 'Linux', 'WebSockets', 'Node.js', 'Express.js', 'HTML', 'CSS'],
         url: []
     },
     {
@@ -85,12 +107,23 @@ const PROJECTS = [
         date: "February 2022 - April 2022",
         type: "UBC Launchpad - Software",
         shortDescription: "Web application* to help users organize and follow playlists of exercises *NOTE: must accept backend certificate to view videos",
-        longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['Flutter', 'Node.js', 'Express.js', 'Firebase Hosting', 'GitHub Actions', 'Amazon Elastic Compute', 'Sequelize', 'PostgreSQL', 'Amazon Relational Database Service'],
+        tasks: [
+            "Created with a Flutter frontend, Node.js with Express and Sequelize backend, and PostgreSQL database",
+            "Implemented backend endpoints for the workout player",
+            "Deployed frontend on Firebase Hosting with GitHub Actions for continuous deployment, backend on Amazon Elastic Compute(EC2), and database on Amazon Relational Database Service(RDS)"
+
+        ],
+        techStack: ['Flutter', 'Node.js', 'Express.js', 'Firebase Hosting', 'GitHub Actions', 'Amazon EC2', 'Sequelize', 'PostgreSQL', 'Amazon RDS'],
         url: [
             {
                 type: "GitHub",
-                href: "https://github.com/haxrox/haxrox"
+                tooltip: "Frontend Repository",
+                href: "https://github.com/ubclaunchpad/workoutpersonalizer-frontend"
+            },
+            {
+                type: "GitHub",
+                tooltip: "Backend Repository",
+                href: "https://github.com/ubclaunchpad/workoutpersonalizer-backend"
             },
             {
                 type: "Web",
@@ -106,10 +139,12 @@ const PROJECTS = [
         title: "Entertainment Biped Robot",
         date: "January 2022 - March 2022",
         type: "UBC CPEN 291 - Hardware + Software",
-        shortDescription: "Biped Robot that dances to a variety of songs using an ItsyBitsy M4 microcontroller, servo motors, colour TFT LCD, piezo buzzer, 3x4 numeric matrix keypad",
-        longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
-        techStack: ['ItsyBitsy M4 Express Microcontroller', 'CircuitPython'
+        shortDescription: "Biped Robot that dances to a variety of songs",
+        tasks: [
+            "Assembled a Biped Robot to dance to various songs using an ItsyBitsy M4 microcontroller, servo motors, colour TFT LCD, piezo buzzer, 3x4 numeric matrix keypad",
+            "Coded an audio class and queue to convert letter notes to frequencies and play music on piezo buzzer, and parallelized the execution of the program written in CircuitPython"
         ],
+        techStack: ['ItsyBitsy M4 Express Microcontroller', 'CircuitPython'],
         url: [
             {
                 type: "GitHub",
@@ -122,7 +157,9 @@ const PROJECTS = [
         date: "January 2022",
         type: "nwHacks Hackathon - Hardware + Software",
         shortDescription: "Web application to help students find or reserve seats in common study areas",
-        longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
+        tasks: [
+            "Devised backend database structure to efficiently store study space configurations, reservations, and occupancies and implemented client API calls on the frontend"
+        ],
         techStack: ['React', 'Bootstrap', 'JavaScript', 'Firebase Firestore', 'Firebase Hosting', 'Firebase Authentication'],
         url: [
             {
@@ -140,7 +177,9 @@ const PROJECTS = [
         date: "September 2021 - December 2021",
         type: "UBC CPEN 211 - Hardware",
         shortDescription: "Reduced Instruction Set Computer (RISC) written in Verilog on an Intel FPGA DE1-SoC",
-        longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
+        tasks: [
+            "Supported decoding ARM Assembly arithmetic and memory instructions, reading/writing to on-board RAM, reading from switches, and outputting information to a 7-segment display"
+        ],
         techStack: ['Verilog', 'FPGA', 'Quartus', 'ModelSim', 'Assembly'],
         url: []
     },
@@ -149,7 +188,11 @@ const PROJECTS = [
         date: "September 2021 - December 2021",
         type: "UBC CPEN 221 - Software",
         shortDescription: "Used Java, OOP, algorithm efficiency, concurrency, multithreading, and big data processing concepts to code algorithms for a series of tasks",
-        longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
+        tasks: [
+            "Wrote software specifications and test cases, resulting in 95 % line and 85 % branch coverage",
+            "Led team by delegating tasks to group members based on their skill set and interests, helping them design algorithms for their tasks, and setting deadlines so that we stayed on track "
+
+        ],
         techStack: ['Java', 'IntelliJ IDEA'],
         url: []
     },
@@ -158,7 +201,7 @@ const PROJECTS = [
         date: "May 2021",
         type: "Personal Project - Software",
         shortDescription: "Android application that uses the Opus Codec to encode and decode audio data to send to another another device using BLE",
-        longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
+        tasks: ["Integrated the Opus Codec using ndk-build for audio encoding and decoding and a queue for efficient data transmission"],
         techStack: ['Java', 'Android Studio', 'Bluetooth Low Energy', 'Opus Codec'],
         url: []
     },
@@ -167,7 +210,7 @@ const PROJECTS = [
         date: "May 2021",
         type: "Personal Project - Software",
         shortDescription: "Android application that uses the Opus Codec to encode and decode audio data",
-        longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
+        tasks: ["Applied Android AudioTrack, AudioRecord and ndk-build"],
         techStack: ['Java', 'Android Studio', 'Opus Codec'],
         url: [
             {
@@ -180,8 +223,11 @@ const PROJECTS = [
         title: "Button Masher",
         date: "December 2020 - May 2021",
         type: "Personal Project - Software",
-        shortDescription: "Android application Button Masher game",
-        longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
+        shortDescription: "Android Button Masher game written in Java",
+        tasks: [
+            "Utilized Firebase Firestore to store user data",
+            "Experimented with Android Preferences Library and ViewModels"
+        ],
         techStack: ['Java', 'Android Studio', 'Firebase Firestore'],
         url: [
             {
@@ -195,7 +241,9 @@ const PROJECTS = [
         date: "February 2021 - March 2021",
         type: "UBC APSC 101 - Hardware",
         shortDescription: "Claw manufactured out of household items to pick up multifarious items",
-        longDescription: "Detailed description w/ build instructions, what i learned, etc, etc",
+        tasks: [
+            "Coded a state machine written in C to efficiently handle claw opening and closing"
+        ],
         techStack: ['C', 'Arduino Uno', 'Arduino IDE'],
         url: [
             {

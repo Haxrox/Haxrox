@@ -5,7 +5,7 @@ import React from 'react';
 class SocialButton extends React.Component {
     render() {
         return (
-            <Tooltip title={this.props.label}>
+            <Tooltip title={this.props.tooltip || this.props.label}>
                 <IconButton aria-label={this.props.label} variant='outlined' className={`${this.props.label}-button`} >
                     <a href={this.props.url} target="_blank" rel="noopener noreferrer">
                         {typeof (this.props.icon) === 'string' ?
