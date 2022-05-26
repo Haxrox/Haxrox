@@ -144,12 +144,7 @@ const PROJECTS = [
             "Coded an audio class and queue to convert letter notes to frequencies and play music on piezo buzzer, and parallelized the execution of the program written in CircuitPython"
         ],
         techStack: ['ItsyBitsy M4 Express Microcontroller', 'CircuitPython'],
-        url: [
-            {
-                type: "GitHub",
-                href: "https://github.com/Haxrox/HaxRover"
-            }
-        ]
+        url: []
     },
     {
         title: "Sitdown",
