@@ -62,7 +62,7 @@ function About() {
                         </Card>
                     </Stack>
                 </AboutCard>
-                <AboutCard title="Technical Skills">
+                <AboutCard title="Skills">
                     <Typography variant="body1">
                         {/* FIX FORMATTING */}
                         <b>Programming Languages:</b> C, C++, Java, Python, Node.js, Assembly, JavaScript, TypeScript, SQL
@@ -82,8 +82,9 @@ function About() {
                         <b>Concepts:</b> Bluetooth Low Energy (BLE), Concurrency, Multi-threading, Networking, Caches, Heaps, Garbage Collection, Local Hax, Files
                     </Typography>
                 </AboutCard>
-                <AboutCard title="Contact">
-                    <SocialButtons color='primary'/>
+                <AboutCard title="Socials">
+                    <SocialButtons color='primary'>
+                    </SocialButtons>
                 </AboutCard>
             </Stack>
 
