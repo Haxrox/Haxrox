@@ -62,10 +62,10 @@ function About() {
                         </Card>
                     </Stack>
                 </AboutCard>
-                <AboutCard title="Tech Stack">
+                <AboutCard title="Technical Skills">
                     <Typography variant="body1">
                         {/* FIX FORMATTING */}
-                        <b>Programming Languages:</b> C, C++, Java, Python, Node.js, Assembly, JavaScript, TypeScript, Flutter, React, HTML, CSS
+                        <b>Programming Languages:</b> C, C++, Java, Python, Node.js, Assembly, JavaScript, TypeScript, SQL
                         <br />
                         <b>Hardware:</b> Arduino, Raspberry Pi, Adafruit ItsyBitsy, Verilog, FPGA, Oscilloscope, Soldering
                         <br />
