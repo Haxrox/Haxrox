@@ -25,7 +25,8 @@ const PROJECTS = [
         tasks: [
             "Interact with the UBCGrades API using Chart.js, and Axios to display course grade information",
             "Utilize Cheerio and Axios to web scrape course information from UBC course registration website",
-            "Contains a music command to play audio from a YouTube video in a Discord Voice call and implements Axios to call YouTube API backend endpoint to get video information"
+            "Contains a music command to play audio from a YouTube video in a Discord Voice call and implements Axios to call YouTube API backend endpoint to get video information",
+            "Writing cryptography algorithms for Caeser, Affine and RSA ciphers"
         ],
         techStack: ['Microsoft Azure Virtual Machine', 'Linux', 'BASH', 'Node.js'],
         url: [

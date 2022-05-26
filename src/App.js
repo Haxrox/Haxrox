@@ -1,11 +1,10 @@
 import { Avatar, Box, Button, ButtonGroup, Grid, Typography } from '@mui/material';
 import { useNavigate } from "react-router-dom";
 import './App.css';
-import { SocialButtons } from './components/SocialButton.js';
+import { SocialButton, SocialButtons } from './components/SocialButton.js';
 import Pages from './pages/index.js';
 
 function App() {
-  console.log(Object.keys(Pages));
   const navigate = useNavigate();
 
   const navigatePage = (e) => {
@@ -34,7 +33,9 @@ function App() {
         </Grid>
 
         <Grid item alignItems="center" justifyContent="center">
-          <SocialButtons />
+          <SocialButtons>
+            <SocialButton label="LeetCode" url="https://leetcode.com/Haxrox/" icon="/icons/LeetCode.svg" />
+          </SocialButtons>
         </Grid>
 
       </Grid>

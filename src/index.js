@@ -10,38 +10,11 @@ import { Project } from './components/Project.js';
 import './index.css';
 import PROJECTS from './Projects-db';
 import reportWebVitals from './reportWebVitals';
+import THEME from './Theme.js';
 
 const About = lazy(() => import("./pages/About.js"));
 const Projects = lazy(() => import("./pages/Projects.js"));
-const theme = createTheme({
-  palette: {
-    // mode: 'dark',
-    primary: {
-      light: '#63a4ff',
-      main: '#1976d2',
-      dark: '#004ba0',
-      contrastText: '#ffffff',
-    },
-    secondary: {
-      light: '#7cccff',
-      main: '#389cff',
-      dark: '#006ecb',
-      contrastText: '#000000',
-    },
-    white: {
-      light: '#fff',
-      main: '#fff',
-      dark: '#fff',
-      contrastText: '#000',
-    },
-    black: {
-      light: '#000',
-      main: '#000',
-      dark: '#000',
-      contrastText: '#fff',
-    }
-  }
-});
+const theme = createTheme(THEME);
 
 const progress = (
   <Box alignItems="center" justifyContent="center" sx={{ display: 'flex', height: "100vh" }}>

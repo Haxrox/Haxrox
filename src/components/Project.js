@@ -165,7 +165,7 @@ function Technologies(props) {
                                 component={metadata && "a"}
                             // href={metadata?.url}
                             // clickable={metadata?.url !== undefined}
-                            // color={metadata?.color}
+                                // color={metadata?.color}
                             />
                         </Grid>
                     })}
