@@ -2,6 +2,7 @@ import { Android, Api, Css, GitHub, Html, Javascript, NavigateBefore, NavigateNe
 import { Backdrop, Box, Card, CardActionArea, CardActions, CardContent, Chip, Collapse, Divider, Grid, Stack, Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React from 'react';
+import Utils from '../Utils.js';
 import AboutCard from './AboutCard.js';
 import Header from './Header.js';
 import NavigateButton from './NavigationButton.js';
@@ -209,11 +210,20 @@ function Project(props) {
                             // </ListItem>
                         ) : null
                     }
+                    <Divider sx={{ my: 1 }} />
                     <Technologies titleVariant="h6" techStack={props.techStack} />
-                    {props?.url.length > 0 ?
-                        <Box sx={{mb: -2}}>
+                    {props.components?.length > 0 ?
+                        <Box>
                             <Divider sx={{ mb: 1 }}/>
-                            <Information url={props.url}/>
+                            {props.components?.map(component =>
+                                Utils.CreateComponentFromJson(component)
+                            )}
+                        </Box> : null
+                    }
+                    {props.url?.length > 0 ?
+                        <Box sx={{ mb: -2 }}>
+                            <Divider sx={{ my: 1 }} />
+                            <Information url={props.url} />
                         </Box> : null
                     }
                 </AboutCard>

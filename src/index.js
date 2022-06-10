@@ -1,6 +1,6 @@
 import { Box, CircularProgress } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import React, { lazy, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   BrowserRouter, Route, Routes
@@ -8,12 +8,11 @@ import {
 import App from './App';
 import { Project } from './components/Project.js';
 import './index.css';
+import PAGES from './pages/index.js';
 import PROJECTS from './Projects-db';
 import reportWebVitals from './reportWebVitals';
 import THEME from './Theme.js';
 
-const About = lazy(() => import("./pages/About.js"));
-const Projects = lazy(() => import("./pages/Projects.js"));
 const theme = createTheme(THEME);
 
 const progress = (
@@ -30,12 +29,12 @@ root.render(
         <Suspense fallback={progress}>
           <Routes>
             <Route path="/" element={<App />} />
-            {/* {Object.entries(Pages).map((page, pageElement) => 
-              <Route path={page} key={page} element={<pageElement />} />
-            )} */}
-            <Route path="about" element={<About />} />
+            {Object.entries(PAGES).map((page) =>
+              <Route path={page[0].toLowerCase()} key={page[0]} element={React.createElement(page[1])} />
+            )}
+            {/* <Route path="about" element={<About />} />
             <Route path="projects" element={<Projects />} />
-            <Route path="*" element={progress}/>
+            <Route path="*" element={progress}/> */}
             {PROJECTS.map((project, index) => <Route path={`/projects/${project.title.replaceAll(" ", "-")}`} element={<Project {...project} prev={index > 0 && PROJECTS[index - 1]} next={index < PROJECTS.length - 1 && PROJECTS[index + 1]} />} key={index} />)}
           </Routes>
         </Suspense>
