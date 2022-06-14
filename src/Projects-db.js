@@ -5,8 +5,8 @@ const PROJECTS = [
         type: "Personal Project - Hardware + Software",
         shortDescription: "BLE Rover built using a Raspberry Pi Zero W running Ubuntu Desktop 32-bit, motor driver, camera module, and 2 servo motors",
         tasks: [
-            "Developing an Android app in Java to remotely control the rover and view live - video feed through BLE",
-            "Using BlueZ and dbus - python library to create a BLE advertiser and GATT Server in Python and writing a state machine to control rover movement and BLE commands concurrently"
+            "Developing an Android app in Java to remotely control the rover and stream video through BLE",
+            "Using BlueZ and dbus-python library to create a BLE advertiser and GATT Server in Python and writing a state machine to control rover movement and BLE commands concurrently"
         ],
         techStack: ['Raspberry Pi', 'Python', 'Linux', 'BlueZ', 'Bluetooth Low Energy', 'DBus', 'BASH', 'Android Studio', 'Java'
         ],
@@ -25,9 +25,32 @@ const PROJECTS = [
         tasks: [
             "Interact with the UBCGrades API using Chart.js, and Axios to display course grade information",
             "Utilize Cheerio and Axios to web scrape course information from UBC course registration website",
-            "Contains a music command to play audio from a YouTube video in a Discord Voice call and implements Axios to call YouTube API backend endpoint to get video information",
+            "Streaming audio from a YouTube video to a Discord Voice call and implements Axios to call YouTube API backend endpoint to get video information",
             "Writing autoplay algorithm to generate the next played song when the queue is empty",
             "Coding cryptography algorithms for Caeser, Affine and RSA ciphers"
+        ],
+        components: [
+            {
+                component: "Typography",
+                properties: {
+                    variant: "h6"
+                },
+                children: ["Commands"]
+            },
+            {
+                component: "Typography",
+                properties: {
+                    variant: "body1"
+                },
+                children: [
+                    "Cryptography: encrypting and decrypting Caeser (w/ key or brute force), Affine, and RSA Cipher (w/ keys)",
+                    "Dictionary: gets definition + synonyms of a given word from Merriam-Webster dictionary API",
+                    "Generate: generates array data (ascending, descending, and unordered) of any type and random strings, for LeetCode test cases, UUIDs, and passwords (not to be used)",
+                    "Music: streams audio from a YouTube video to a Discord Voice Call with features, such as autoplay, repeat, queueing, playlsts",
+                    "RNG: generates a random number",
+                    "UBCGrades: gets course grade summary from UBCGrades API"
+                ]
+            }
         ],
         techStack: ['Microsoft Azure Virtual Machine', 'Linux', 'BASH', 'Node.js'],
         url: [
@@ -66,7 +89,12 @@ const PROJECTS = [
             "Integrate AWS AppSync to query user data stored in AWS Amplify DataStore"
         ],
         techStack: ['Android Studio', 'Java',  'Bluetooth Low Energy', 'AWS AppSync', 'AWS Amplify Datastore'],
-        url: []
+        url: [
+            {
+                type: "PlayStore",
+                href: "https://play.google.com/store/apps/details?id=com.belltek.androidxhmni"
+            }
+        ]
     },
     {
         title: "Personal Website",
@@ -112,7 +140,6 @@ const PROJECTS = [
             "Created with a Flutter frontend, Node.js with Express and Sequelize backend, and PostgreSQL database",
             "Implemented backend endpoints for the workout player",
             "Deployed frontend on Firebase Hosting with GitHub Actions for continuous deployment, backend on Amazon Elastic Compute(EC2), and database on Amazon Relational Database Service(RDS)"
-
         ],
         techStack: ['Flutter', 'Node.js', 'Express.js', 'Firebase Hosting', 'GitHub Actions', 'Amazon EC2', 'Sequelize', 'PostgreSQL', 'Amazon RDS'],
         url: [
@@ -183,9 +210,9 @@ const PROJECTS = [
         title: "Mini Projects",
         date: "September 2021 - December 2021",
         type: "UBC CPEN 221 - Software",
-        shortDescription: "Used Java, OOP, algorithm efficiency, concurrency, multithreading, and big data processing concepts to code algorithms for a series of tasks",
+        shortDescription: "Used Java, OOP, algorithm efficiency, client-server model, concurrency, multithreading, and big data processing concepts to create a Malware Distribution Risk Analyzer, Document-Level Sentiment Analyzer, and WikiMediator Network Server",
         tasks: [
-            "Wrote software specifications and test cases, resulting in 95 % line and 85 % branch coverage",
+            "Wrote software specifications and test cases, resulting in 95% line and 85% branch coverage",
             "Led team by delegating tasks to group members based on their skill set and interests, helping them design algorithms for their tasks, and setting deadlines so that we stayed on track "
 
         ],
@@ -199,7 +226,13 @@ const PROJECTS = [
         shortDescription: "Android application that uses the Opus Codec to encode and decode audio data to send to another another device using BLE",
         tasks: ["Integrated the Opus Codec using ndk-build for audio encoding and decoding and a queue for efficient data transmission"],
         techStack: ['Java', 'Android Studio', 'Bluetooth Low Energy', 'Opus Codec'],
-        url: []
+        url: [
+            {
+                type: "Android",
+                href: "apks/BleAudio.apk",
+                tooltip: "Android Application APK"
+            }
+        ]
     },
     {
         title: "Android Opus Codec Prototype",
