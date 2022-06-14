@@ -62,7 +62,7 @@ function About() {
                         </Card>
                     </Stack>
                 </AboutCard>
-                <AboutCard title="Skills">
+                <AboutCard title="Technologies">
                     <Typography variant="body1">
                         {/* FIX FORMATTING */}
                         <b>Programming Languages:</b> C, C++, Java, Python, Node.js, Assembly, JavaScript, TypeScript, SQL
@@ -73,11 +73,11 @@ function About() {
                         <br />
                         <b>Programs:</b> Git, GitHub, BASH, PowerShell, Quartus, ModelSim, SOLIDWORKS, MATLAB, GDB, Make, Valgrind, Quartus, ModelSim, Jupyter Notebook
                         <br />
-                        <b>Web Languages: </b>React, Flutter, HTML, CSS
+                        <b>Web Frameworks: </b>React, Flutter, HTML, CSS
                         <br />
                         <b>IDEs:</b> Visual Studio Code, Visual Studio, IntelliJ IDEA, Android Studio, Arduino IDE
                         <br />
-                        <b>Software:</b> Adobe Photoshop, Indesign Illustrator, Microsoft Office, Google Workspace
+                        <b>Software:</b> Adobe Photoshop, Indesign, Illustrator, Microsoft Office, Google Workspace
                         <br />
                         <b>Concepts:</b> Bluetooth Low Energy (BLE), Concurrency, Multi-threading, Networking, Caches, Heaps, Garbage Collection, Local Hax, Files
                     </Typography>
