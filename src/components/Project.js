@@ -1,4 +1,4 @@
-import { Android, Api, Css, GitHub, Html, Javascript, NavigateBefore, NavigateNext, Web } from '@mui/icons-material';
+import { Android, Api, Css, GitHub, Html, Javascript, NavigateBefore, NavigateNext, Shop, Web } from '@mui/icons-material';
 import { Backdrop, Box, Card, CardActionArea, CardActions, CardContent, Chip, Collapse, Divider, Grid, Stack, Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React from 'react';
@@ -20,6 +20,14 @@ const ACTION_ICONS = {
     Backend: {
         icon: Api,
         tooltip: "Backend"
+    },
+    Android: {
+        icon: Android,
+        tooltip: "APK"
+    },
+    PlayStore: {
+        icon: Shop,
+        tooltip: "Google Play Store"
     }
 }
 

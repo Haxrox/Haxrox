@@ -89,7 +89,12 @@ const PROJECTS = [
             "Integrate AWS AppSync to query user data stored in AWS Amplify DataStore"
         ],
         techStack: ['Android Studio', 'Java',  'Bluetooth Low Energy', 'AWS AppSync', 'AWS Amplify Datastore'],
-        url: []
+        url: [
+            {
+                type: "PlayStore",
+                href: "https://play.google.com/store/apps/details?id=com.belltek.androidxhmni"
+            }
+        ]
     },
     {
         title: "Personal Website",
@@ -135,7 +140,6 @@ const PROJECTS = [
             "Created with a Flutter frontend, Node.js with Express and Sequelize backend, and PostgreSQL database",
             "Implemented backend endpoints for the workout player",
             "Deployed frontend on Firebase Hosting with GitHub Actions for continuous deployment, backend on Amazon Elastic Compute(EC2), and database on Amazon Relational Database Service(RDS)"
-
         ],
         techStack: ['Flutter', 'Node.js', 'Express.js', 'Firebase Hosting', 'GitHub Actions', 'Amazon EC2', 'Sequelize', 'PostgreSQL', 'Amazon RDS'],
         url: [
@@ -206,9 +210,9 @@ const PROJECTS = [
         title: "Mini Projects",
         date: "September 2021 - December 2021",
         type: "UBC CPEN 221 - Software",
-        shortDescription: "Used Java, OOP, algorithm efficiency, concurrency, multithreading, and big data processing concepts to code algorithms for a series of tasks",
+        shortDescription: "Used Java, OOP, algorithm efficiency, client-server model, concurrency, multithreading, and big data processing concepts to create a Malware Distribution Risk Analyzer, Document-Level Sentiment Analyzer, and WikiMediator Network Server",
         tasks: [
-            "Wrote software specifications and test cases, resulting in 95 % line and 85 % branch coverage",
+            "Wrote software specifications and test cases, resulting in 95% line and 85% branch coverage",
             "Led team by delegating tasks to group members based on their skill set and interests, helping them design algorithms for their tasks, and setting deadlines so that we stayed on track "
 
         ],
@@ -222,7 +226,13 @@ const PROJECTS = [
         shortDescription: "Android application that uses the Opus Codec to encode and decode audio data to send to another another device using BLE",
         tasks: ["Integrated the Opus Codec using ndk-build for audio encoding and decoding and a queue for efficient data transmission"],
         techStack: ['Java', 'Android Studio', 'Bluetooth Low Energy', 'Opus Codec'],
-        url: []
+        url: [
+            {
+                type: "Android",
+                href: "apks/BleAudio.apk",
+                tooltip: "Android Application APK"
+            }
+        ]
     },
     {
         title: "Android Opus Codec Prototype",
