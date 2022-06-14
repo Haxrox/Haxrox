@@ -216,11 +216,11 @@ const PROJECTS = [
             "Led team by delegating tasks to group members based on their skill set and interests, helping them design algorithms for their tasks, and setting deadlines so that we stayed on track "
 
         ],
-        techStack: ['Java', 'IntelliJ IDEA'],
+        techStack: ['Java', 'IntelliJ IDEA', 'JUnit', 'Google Cloud Sentiment Analysis'],
         url: []
     },
     {
-        title: "BLE Audio",
+        title: "BleAudio",
         date: "May 2021",
         type: "Personal Project - Software",
         shortDescription: "Android application that uses the Opus Codec to encode and decode audio data to send to another another device using BLE",
