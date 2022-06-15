@@ -1,7 +1,10 @@
 import { Android, Api, Css, GitHub, Html, Javascript, NavigateBefore, NavigateNext, Shop, Web } from '@mui/icons-material';
-import { Backdrop, Box, Card, CardActionArea, CardActions, CardContent, Chip, Collapse, Divider, Grid, Stack, Typography } from '@mui/material';
+import { Box, Card, CardActionArea, CardActions, CardContent, Chip, Collapse, Divider, Grid, Stack, Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Error from "../components/Error.js";
+import Loading from '../components/Loading.js';
+import ProjectsService from '../ProjectsService.js';
 import Utils from '../Utils.js';
 import AboutCard from './AboutCard.js';
 import Header from './Header.js';
@@ -195,68 +198,92 @@ function Information(props) {
 }
 
 function Project(props) {
-    return (
-        <Box>
-            <Header tab={props.title} />
-            <Box sx={{ p: 2, pb: 10, mt: 2 }}>
-                <AboutCard title={props.title}>
-                    <Typography >
-                        {props.shortDescription}
-                    </Typography>
-                    {props.page ? props.page : props?.tasks?.length > 0 ?
-                        props.tasks.map(task =>
-                            <Typography variant="body1" sx={{ ml: 1 }}>
-                                <li>{`${task}`}</li>
-                            </Typography>
-                            // <ListItem key={task} disablePadding>
-                            //     <ListItemIcon>
-                            //         <Circle color="primary"/>
-                            //     </ListItemIcon>
-                            //     <ListItemText variant="body1">
-                            //         {task}
-                            //     </ListItemText >
-                            // </ListItem>
-                        ) : null
-                    }
-                    <Divider sx={{ my: 1 }} />
-                    <Technologies titleVariant="h6" techStack={props.techStack} />
-                    {props.components?.length > 0 ?
-                        <Box>
-                            <Divider sx={{ mb: 1 }}/>
-                            {props.components?.map(component =>
-                                Utils.CreateComponentFromJson(component)
-                            )}
-                        </Box> : null
-                    }
-                    {props.url?.length > 0 ?
-                        <Box sx={{ mb: -2 }}>
-                            <Divider sx={{ my: 1 }} />
-                            <Information url={props.url} />
-                        </Box> : null
-                    }
-                </AboutCard>
+    const [fetchedProject, setFetchedProject] = useState(false);
+    const [projectData, setProjectData] = useState({});
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        ProjectsService.GetDetailedProject(props.title)
+            .then(
+                (result) => {
+                    setFetchedProject(true);
+                    setProjectData(result);
+                },
+                (error) => {
+                    setFetchedProject(true);
+                    setError(error);
+                }
+            )
+    }, [props.title]);
+
+    if (error) {
+        return <Error {...error} />
+    } else if (!fetchedProject) {
+        return <Loading />
+    } else {
+        return (
+            <Box>
+                <Header tab={projectData.title} />
+                <Box sx={{ p: 2, pb: 10, mt: 2 }}>
+                    <AboutCard title={projectData.title}>
+                        <Typography >
+                            {projectData.shortDescription}
+                        </Typography>
+                        {projectData.page ? projectData.page : projectData?.tasks?.length > 0 ?
+                            projectData.tasks.map(task =>
+                                <Typography variant="body1" sx={{ ml: 1 }}>
+                                    <li>{`${task}`}</li>
+                                </Typography>
+                                // <ListItem key={task} disablePadding>
+                                //     <ListItemIcon>
+                                //         <Circle color="primary"/>
+                                //     </ListItemIcon>
+                                //     <ListItemText variant="body1">
+                                //         {task}
+                                //     </ListItemText >
+                                // </ListItem>
+                            ) : null
+                        }
+                        <Divider sx={{ my: 1 }} />
+                        <Technologies titleVariant="h6" techStack={projectData.techStack} />
+                        {projectData.components?.length > 0 ?
+                            <Box>
+                                <Divider sx={{ mb: 1 }} />
+                                {projectData.components?.map(component =>
+                                    Utils.CreateComponentFromJson(component)
+                                )}
+                            </Box> : null
+                        }
+                        {projectData.url?.length > 0 ?
+                            <Box sx={{ mb: -2 }}>
+                                <Divider sx={{ my: 1 }} />
+                                <Information url={projectData.url} />
+                            </Box> : null
+                        }
+                    </AboutCard>
+                </Box>
+                {props.prev ?
+                    <NavigateButton href={`/projects/${props.prev.title.replaceAll(" ", "-")}`} left='16px'>
+                        <NavigateBefore />
+                        {props.prev.title}
+                    </NavigateButton> : null
+                }
+                {props.next ?
+                    <NavigateButton href={`/projects/${props.next.title.replaceAll(" ", "-")}`} right='16px'>
+                        {props.next.title}
+                        <NavigateNext />
+                    </NavigateButton> : null
+                }
             </Box>
-            {props.prev ?
-                <NavigateButton href={`/projects/${props.prev.title.replaceAll(" ", "-")}`} left='16px'>
-                    <NavigateBefore />
-                    {props.prev.title}
-                </NavigateButton> : null
-            }
-            {props.next ?
-                <NavigateButton href={`/projects/${props.next.title.replaceAll(" ", "-")}`} right='16px'>
-                    {props.next.title}
-                    <NavigateNext />
-                </NavigateButton> : null
-            }
-        </Box>
-    )
+        )
+    }
 }
 
-function ProjectDialog(props) {
-    <Backdrop sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }} open={Object.keys(props).length > 0}>
-        <Project {...props} />
-    </Backdrop>
-}
+// function ProjectDialog(props) {
+//     <Backdrop sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }} open={Object.keys(props).length > 0}>
+//         <Project {...props} />
+//     </Backdrop>
+// }
 
 function ProjectCard(props) {
     const [expanded, setExpanded] = React.useState(false);
@@ -319,7 +346,7 @@ function ProjectCard(props) {
 
 export {
     Project,
-    ProjectDialog,
+    // ProjectDialog,
     ProjectCard
 };
 

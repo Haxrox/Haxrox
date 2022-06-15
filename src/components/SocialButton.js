@@ -27,7 +27,6 @@ class SocialButton extends React.Component {
 
 class SocialButtons extends React.Component {
     render() {
-        console.log(this.props)
         return (
             <Box>
                 <SocialButton label="LinkedIn" url="https://www.linkedin.com/in/bell-chen/" icon={LinkedIn || this.props.linkedInIcon} height={this.props.height} width={this.props.width} color={this.props.linkedInColor || this.props.color}/>
