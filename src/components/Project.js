@@ -1,4 +1,4 @@
-import { Android, Api, Css, GitHub, Html, Javascript, NavigateBefore, NavigateNext, Shop, Web } from '@mui/icons-material';
+import { Android, Api, Css, GitHub, Html, Javascript, NavigateBefore, NavigateNext, Shop, Terminal, Web } from '@mui/icons-material';
 import { Box, Card, CardActionArea, CardActions, CardContent, Chip, Collapse, Divider, Grid, Stack, Typography } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React, { useEffect, useState } from 'react';
@@ -31,6 +31,10 @@ const ACTION_ICONS = {
     PlayStore: {
         icon: Shop,
         tooltip: "Google Play Store"
+    },
+    Replit: {
+        icon: Terminal,
+        tooltip: "Replit"
     }
 }
 

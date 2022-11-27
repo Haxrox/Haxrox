@@ -20,7 +20,7 @@ function About() {
                     <Stack spacing={2}>
                         <Card >
                             <CardActionArea href="https://www.ubc.ca/" sx={{ display: 'flex' }}>
-                                <CardMedia component="img" sx={{ maxWidth: 108 }} image="icons/UBC.jfif" alt="Logo" />
+                                <CardMedia component="img" sx={{ maxWidth: 108 }} image="icons/UBC.jfif" alt="UBC Logo" />
                                 <CardContent sx={{ width: "100%", p: 2 }}>
                                     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                                         <Typography variant="h6">
@@ -41,7 +41,7 @@ function About() {
                         </Card>
                         <Card >
                             <CardActionArea href="https://www.sfu.ca/" sx={{ display: 'flex' }}>
-                                <CardMedia component="img" sx={{ maxWidth: 108 }} image="icons/SFU.jfif" alt="Logo" />
+                                <CardMedia component="img" sx={{ maxWidth: 108 }} image="icons/SFU.jfif" alt="SFU Logo" />
                                 <CardContent sx={{ width: "100%", p: 2 }}>
                                     <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                                         <Typography variant="h6" >
@@ -79,8 +79,66 @@ function About() {
                         <br />
                         <b>Software:</b> Adobe Photoshop, Indesign, Illustrator, Microsoft Office, Google Workspace
                         <br />
-                        <b>Concepts:</b> Bluetooth Low Energy (BLE), Concurrency, Multi-threading, Networking, Caches, Heaps, Garbage Collection, Local Hax, Files
+                        <b>Concepts:</b> Bluetooth Low Energy (BLE), Concurrency, Multithreading, Networking, Caches, Heaps, Garbage Collection, Local Hax, Files
                     </Typography>
+                </AboutCard>
+                <AboutCard title="Experience">
+                    <Stack spacing={2}>
+                        <Card >
+                            <CardActionArea href="https://ece.ubc.ca/" sx={{ display: 'flex' }}>
+                                <CardMedia component="img" sx={{ maxWidth: 108 }} image="icons/ECE.jpg" alt="UBC ECE Logo" />
+                                <CardContent sx={{ width: "100%", p: 2 }}>
+                                    <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                                        <Typography variant="h6">
+                                            APSC 160 Teaching Assistant
+                                        </Typography>
+                                        <Typography variant="subtitle1">
+                                            October, 2022 - Present
+                                        </Typography>
+                                    </Box>
+                                    <Typography variant="subtitle2">
+                                        UBC Electrical and Computer Engineering
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+                        </Card>
+                        <Card >
+                            <CardActionArea href="https://www.mathtutornetwork.com/" sx={{ display: 'flex' }}>
+                                <CardMedia component="img" sx={{ maxWidth: 108 }} image="icons/MathTutorNetwork.jpg" alt="Math Tutor Network Logo" />
+                                <CardContent sx={{ width: "100%", p: 2 }}>
+                                    <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                                        <Typography variant="h6">
+                                            Junior Academic Tutor II
+                                        </Typography>
+                                        <Typography variant="subtitle1">
+                                            September, 2021 - Present
+                                        </Typography>
+                                    </Box>
+                                    <Typography variant="subtitle2">
+                                        Math Tutor Network
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+                        </Card>
+                        <Card >
+                            <CardActionArea href="https://ubclaunchpad.com/" sx={{ display: 'flex' }}>
+                                <CardMedia component="img" sx={{ maxWidth: 108 }} image="icons/Launchpad.png" alt="UBC Launch Pad Logo" />
+                                <CardContent sx={{ width: "100%", p: 2 }}>
+                                    <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                                        <Typography variant="h6">
+                                            Software Developer
+                                        </Typography>
+                                        <Typography variant="subtitle1">
+                                            February, 2022 - April 2022
+                                        </Typography>
+                                    </Box>
+                                    <Typography variant="subtitle2">
+                                        UBC Launch Pad
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+                        </Card>
+                    </Stack>
                 </AboutCard>
                 <AboutCard title="Socials">
                     <SocialButtons color='primary'>
