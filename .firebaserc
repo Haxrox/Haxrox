@@ -7,6 +7,12 @@
       "hosting": {
         "haxtech": [
           "haxtech"
+        ],
+        "belltech": [
+          "belltech"
+        ],
+        "belltek": [
+          "belltek"
         ]
       }
     }
