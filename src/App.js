@@ -42,6 +42,11 @@ function App() {
       <Typography variant="body1" fontWeight="bold" color='primary.contrastText' sx={{ position: 'fixed', bottom: '16px' }}>
         Portions of this website are still a WIP
       </Typography>
+
+      <Typography variant="caption" color='primary.contrastText' sx={{ position: 'fixed', bottom: '0px' }}>
+        © 2021 - 2023 Bell Chen. All rights reserved.
+        All logos and trademarks are the property of their respective owners.
+      </Typography>
     </Box>
   );
 }

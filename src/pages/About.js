@@ -1,6 +1,7 @@
 import { NavigateNext } from '@mui/icons-material';
 import { Box, Card, CardActionArea, CardContent, CardMedia, Link, Stack, Typography } from '@mui/material';
 import AboutCard from '../components/AboutCard.js';
+import Footer from '../components/Footer.js';
 import Header from '../components/Header.js';
 import NavigateButton from '../components/NavigationButton.js';
 import { SocialButtons } from '../components/SocialButton.js';
@@ -55,7 +56,8 @@ function About() {
                                         Concurrent Studies - 4.33/4.33 GPA
                                     </Typography>
                                     <Typography variant="body2">
-                                        Completed two computer science courses, <Link underline="hover" href="https://www.sfu.ca/students/calendar/2019/fall/courses/cmpt/125.html">Introduction to Computer Science and Programming II</Link> (A+) and <Link underline="hover" href="https://www.sfu.ca/students/calendar/2019/fall/courses/cmpt/127.html">Computer Laboratory</Link> (A+)
+                                        Completed two computer science courses Introduction to Computer Science II (A+) and Computer Laboratory (A+)
+                                        {/* Completed two computer science courses, <Link underline="hover" href="https://www.sfu.ca/students/calendar/2019/fall/courses/cmpt/125.html">Introduction to Computer Science and Programming II</Link> (A+) and <Link underline="hover" href="https://www.sfu.ca/students/calendar/2019/fall/courses/cmpt/127.html">Computer Laboratory</Link> (A+) */}
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
@@ -69,9 +71,9 @@ function About() {
                         <br />
                         <b>Hardware:</b> Arduino, Raspberry Pi, Adafruit ItsyBitsy, Verilog, FPGA, Oscilloscope, Soldering
                         <br />
-                        <b>Cloud Software:</b> Microsoft Azure Virtual Machine, Cloud Functions, Google Cloud App Engine, Compute Engine, Natural Language Processing, Firebase Firestore, Hosting, Authentication, AWS AppSync, Amazon Elastic Compute (EC2), Relational Database (RDS), SSH, SCP
+                        <b>Cloud Software:</b> Microsoft Azure Virtual Machine, Cloud Functions, Google Cloud App Engine, Compute Engine, Natural Language Processing, Firebase Firestore, Hosting, Authentication, AWS AppSync, Amazon Elastic Compute (EC2), Relational Database (RDS), SSH, SCP, MongoDB, PostgreSQL
                         <br />
-                        <b>Programs:</b> Git, GitHub, BASH, PowerShell, Quartus, ModelSim, SOLIDWORKS, MATLAB, GDB, Make, Valgrind, Quartus, ModelSim, Jupyter Notebook
+                        <b>Programs:</b> Git, GitHub, BASH, PowerShell, Intel Quartus, ModelSim, Platform Designer, Monitor Program, SOLIDWORKS, MATLAB, GDB, Make, Valgrind, Quartus, ModelSim, Jupyter Notebook
                         <br />
                         <b>Web Frameworks: </b>React, Flutter, HTML, CSS
                         <br />
@@ -146,10 +148,13 @@ function About() {
                 </AboutCard>
             </Stack>
 
+            {/* <Footer /> */}
+
             <NavigateButton href='/projects' right='16px'>
                 Projects
                 <NavigateNext />
             </NavigateButton>
+
         </Box>
     );
 }
