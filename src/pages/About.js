@@ -14,8 +14,7 @@ function About() {
             <Stack spacing={5} sx={{ p: 2, mt: 2 }}>
                 <AboutCard title="About Me">
                     <Typography variant="body1">
-                        I am an undergraduate student at the University of British Columbia studying Computer Engineering. I am a committed worker with an eagerness to learn and grow through experience. I strive to further my knowledge in the tech industry and am always looking forward to learning something new.
-                    </Typography>
+As a highly motivated and dedicated Computer Engineering undergraduate at the University of British Columbia, my passion for technology and desire to make a meaningful impact in the industry drive me to excel. I have a strong work ethic and am constantly seeking new challenges and opportunities to expand my skills and push the boundaries of what is possible. I stay current with the latest advancements in hardware and software, and am committed to finding innovative ways to apply my knowledge. Whether it's exploring new technologies or finding ways to make a difference, I am always eager to learn and grow in the tech industry.                    </Typography>
                 </AboutCard>
                 <AboutCard title="Education">
                     <Stack spacing={2}>
