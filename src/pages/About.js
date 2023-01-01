@@ -1,7 +1,6 @@
 import { NavigateNext } from '@mui/icons-material';
-import { Box, Card, CardActionArea, CardContent, CardMedia, Link, Stack, Typography } from '@mui/material';
+import { Box, Card, CardActionArea, CardContent, CardMedia, Stack, Typography } from '@mui/material';
 import AboutCard from '../components/AboutCard.js';
-import Footer from '../components/Footer.js';
 import Header from '../components/Header.js';
 import NavigateButton from '../components/NavigationButton.js';
 import { SocialButtons } from '../components/SocialButton.js';

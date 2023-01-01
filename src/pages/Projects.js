@@ -3,7 +3,6 @@ import { Box, Grid } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Error from "../components/Error.js";
-import Footer from "../components/Footer.js";
 import Header from '../components/Header.js';
 import Loading from '../components/Loading.js';
 import NavigateButton from '../components/NavigationButton.js';
