@@ -1,5 +1,5 @@
 import { NavigateNext } from '@mui/icons-material';
-import { Box, Card, CardActionArea, CardContent, CardMedia, Link, Stack, Typography } from '@mui/material';
+import { Box, Card, CardActionArea, CardContent, CardMedia, Stack, Typography } from '@mui/material';
 import AboutCard from '../components/AboutCard.js';
 import Header from '../components/Header.js';
 import NavigateButton from '../components/NavigationButton.js';
@@ -13,8 +13,7 @@ function About() {
             <Stack spacing={5} sx={{ p: 2, mt: 2 }}>
                 <AboutCard title="About Me">
                     <Typography variant="body1">
-                        I am an undergraduate student at the University of British Columbia studying Computer Engineering. I am a committed worker with an eagerness to learn and grow through experience. I strive to further my knowledge in the tech industry and am always looking forward to learning something new.
-                    </Typography>
+As a highly motivated and dedicated Computer Engineering undergraduate at the University of British Columbia, my passion for technology and desire to make a meaningful impact in the industry drive me to excel. I have a strong work ethic and am constantly seeking new challenges and opportunities to expand my skills and push the boundaries of what is possible. I stay current with the latest advancements in hardware and software, and am committed to finding innovative ways to apply my knowledge. Whether it's exploring new technologies or finding ways to make a difference, I am always eager to learn and grow in the tech industry.                    </Typography>
                 </AboutCard>
                 <AboutCard title="Education">
                     <Stack spacing={2}>
@@ -55,7 +54,8 @@ function About() {
                                         Concurrent Studies - 4.33/4.33 GPA
                                     </Typography>
                                     <Typography variant="body2">
-                                        Completed two computer science courses, <Link underline="hover" href="https://www.sfu.ca/students/calendar/2019/fall/courses/cmpt/125.html">Introduction to Computer Science and Programming II</Link> (A+) and <Link underline="hover" href="https://www.sfu.ca/students/calendar/2019/fall/courses/cmpt/127.html">Computer Laboratory</Link> (A+)
+                                        Completed two computer science courses Introduction to Computer Science II (A+) and Computer Laboratory (A+)
+                                        {/* Completed two computer science courses, <Link underline="hover" href="https://www.sfu.ca/students/calendar/2019/fall/courses/cmpt/125.html">Introduction to Computer Science and Programming II</Link> (A+) and <Link underline="hover" href="https://www.sfu.ca/students/calendar/2019/fall/courses/cmpt/127.html">Computer Laboratory</Link> (A+) */}
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
@@ -69,9 +69,9 @@ function About() {
                         <br />
                         <b>Hardware:</b> Arduino, Raspberry Pi, Adafruit ItsyBitsy, Verilog, FPGA, Oscilloscope, Soldering
                         <br />
-                        <b>Cloud Software:</b> Microsoft Azure Virtual Machine, Cloud Functions, Google Cloud App Engine, Compute Engine, Natural Language Processing, Firebase Firestore, Hosting, Authentication, AWS AppSync, Amazon Elastic Compute (EC2), Relational Database (RDS), SSH, SCP
+                        <b>Cloud Software:</b> Microsoft Azure Virtual Machine, Cloud Functions, Google Cloud App Engine, Compute Engine, Natural Language Processing, Firebase Firestore, Hosting, Authentication, AWS AppSync, Amazon Elastic Compute (EC2), Relational Database (RDS), SSH, SCP, MongoDB, PostgreSQL
                         <br />
-                        <b>Programs:</b> Git, GitHub, BASH, PowerShell, Quartus, ModelSim, SOLIDWORKS, MATLAB, GDB, Make, Valgrind, Quartus, ModelSim, Jupyter Notebook
+                        <b>Programs:</b> Git, GitHub, BASH, PowerShell, Intel Quartus, ModelSim, Platform Designer, Monitor Program, SOLIDWORKS, MATLAB, GDB, Make, Valgrind, Quartus, ModelSim, Jupyter Notebook
                         <br />
                         <b>Web Frameworks: </b>React, Flutter, HTML, CSS
                         <br />
@@ -146,10 +146,13 @@ function About() {
                 </AboutCard>
             </Stack>
 
+            {/* <Footer /> */}
+
             <NavigateButton href='/projects' right='16px'>
                 Projects
                 <NavigateNext />
             </NavigateButton>
+
         </Box>
     );
 }

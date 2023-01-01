@@ -52,6 +52,7 @@ function Projects() {
                     <NavigateBefore />
                     About
                 </NavigateButton>
+                {/* <Footer /> */}
             </Box>
         );
     }
