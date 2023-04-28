@@ -26,7 +26,7 @@ As a highly motivated and dedicated Computer Engineering undergraduate at the Un
                                             University of British Columbia
                                         </Typography>
                                         <Typography variant="subtitle1">
-                                            September, 2020 - May, 2025
+                                            September 2020 - May 2025
                                         </Typography>
                                     </Box>
                                     <Typography variant="subtitle2">
@@ -47,7 +47,7 @@ As a highly motivated and dedicated Computer Engineering undergraduate at the Un
                                             Simon Fraser University
                                         </Typography>
                                         <Typography variant="subtitle1"  >
-                                            September 2019 - December, 2019
+                                            September 2019 - December 2019
                                         </Typography>
                                     </Box>
                                     <Typography variant="subtitle2">
@@ -93,7 +93,7 @@ As a highly motivated and dedicated Computer Engineering undergraduate at the Un
                                             APSC 160 Teaching Assistant
                                         </Typography>
                                         <Typography variant="subtitle1">
-                                            October, 2022 - Present
+                                            October 2022 - Present
                                         </Typography>
                                     </Box>
                                     <Typography variant="subtitle2">
@@ -111,7 +111,7 @@ As a highly motivated and dedicated Computer Engineering undergraduate at the Un
                                             Junior Academic Tutor II
                                         </Typography>
                                         <Typography variant="subtitle1">
-                                            September, 2021 - Present
+                                            September 2021 - Present
                                         </Typography>
                                     </Box>
                                     <Typography variant="subtitle2">
@@ -129,7 +129,7 @@ As a highly motivated and dedicated Computer Engineering undergraduate at the Un
                                             Software Developer
                                         </Typography>
                                         <Typography variant="subtitle1">
-                                            February, 2022 - April 2022
+                                            February 2022 - April 2022
                                         </Typography>
                                     </Box>
                                     <Typography variant="subtitle2">
