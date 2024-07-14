@@ -1,6 +1,6 @@
 ### Hi there! 👋
 
-My name is Bell Chen and I'm a third year Computer Engineering student at The University of British Columbia. 
+My name is Bell Chen and I'm a fourth year Computer Engineering student at The University of British Columbia. 
 
 Check out some of my projects below or under the **[repositories](https://github.com/Haxrox?tab=repositories)** tab!
 
